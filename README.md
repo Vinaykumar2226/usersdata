@@ -7,5 +7,5 @@ ex:<br/>
 https://usersdata-4osl.onrender.com/users/1425,1426?cols=account_id,href,id<br/>
 
 fetches all the unique account id<br/>
-https://usersdata-4osl.onrender.com/users/unique-account-ids<br/>
+https://usersdata-4osl.onrender.com/unique-account-ids<br/>
 
