@@ -1,24 +1,20 @@
-// Importing express
 const express = require("express");
-
-// Initializing the app
+const path = require("path");
 const app = express();
 
-// Define a GET endpoint for /vinay/dummydata
-app.get("/vinay/dummydata", (req, res) => {
-  const responseData = {
-    name: "Vinay",
-    some: "thing",
-  };
+// Endpoint to return the JSON file
+app.get("/getjson", (req, res) => {
+  const filePath = path.join(__dirname, "data.json");
 
-  // Send the JSON response
-  res.status(200).json(responseData);
+  // Send the JSON file
+  res.sendFile(filePath, (err) => {
+    if (err) {
+      res.status(500).json({ error: "Failed to send the JSON file." });
+    }
+  });
 });
 
-// Define a port to listen on
 const port = 3000;
-
-// Start the server
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
