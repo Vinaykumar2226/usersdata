@@ -2,8 +2,8 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const fs = require("fs");
-const flattenArrayOfObjects = require('./utils/jsonManipulationMethods').flattenArrayOfObjects
-const extractUniqueKeys = require('./extractUniqueKeys');
+const flattenArrayOfObjects = require('./utils/jsonManipulationMethods').flattenArrayOfObjects;
+const extractUniqueKeys = require('./extractUniquekeys');
 
 
 const port = 3001;
@@ -117,7 +117,10 @@ app.get("/users-specific", (req, res) => {
 
 
 app.get("/unique-account-ids", (req, res) => {
-  fs.readFile(path.join(__dirname, "data.json"), "utf8", (err, data) => {
+
+  const filePath = path.join(__dirname, "data.json");
+
+  fs.readFile(filePath, "utf8", (err, data) => {
     if (err) {
       return res.status(500).json({ error: "Failed to read the JSON file." });
     }
@@ -148,9 +151,12 @@ app.get("/unique-account-ids", (req, res) => {
 });
 
 app.get('/unique-keys', (req, res) => {
-  fs.readFile(path.join(__dirname, 'data.json'), 'utf8', (err, data) => {
+  const filePath = path.join(__dirname, 'data.json');
+
+  fs.readFile(filePath, 'utf8', (err, data) => {
     if (err) {
-      return res.status(500).json({ error: 'Failed to read the JSON file.' });
+      console.error('Error reading file:', err);
+      return res.status(500).json({ error: 'Failed to read the JSON file.', details: err.message });
     }
 
     try {
@@ -158,7 +164,10 @@ app.get('/unique-keys', (req, res) => {
       const uniqueKeys = extractUniqueKeys(jsonData);
       res.status(200).json(uniqueKeys);
     } catch (parseError) {
-      res.status(500).json({ error: 'Failed to parse the JSON file.' });
+      console.error('Error parsing JSON:', parseError);
+      res.status(500).json({ error: 'Failed to parse the JSON file.', details: parseError.message });
     }
   });
 });
+
+  
