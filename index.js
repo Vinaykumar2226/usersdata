@@ -3,7 +3,6 @@ const path = require("path");
 const app = express();
 const fs = require("fs");
 const flattenArrayOfObjects = require('./utils/jsonManipulationMethods').flattenArrayOfObjects
-const extractUniqueKeys = require('./extractUniqueKeys');
 
 
 const port = 3001;
