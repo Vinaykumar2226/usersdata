@@ -2,7 +2,9 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const fs = require("fs");
-const flattenArrayOfObjects = require('./utils/jsonManipulationMethods').flattenArrayOfObjects
+const flattenArrayOfObjects = require('./utils/jsonManipulationMethods').flattenArrayOfObjects;
+const extractUniqueKeys = require('./extractUniquekeys');
+
 
 
 const port = 3001;
@@ -149,3 +151,23 @@ app.get("/unique-account-ids", (req, res) => {
   });
 });
 
+
+app.get('/unique-keys', (req, res) => {
+  const filePath = path.join(__dirname, 'data.json');
+
+  fs.readFile(filePath, 'utf8', (err, data) => {
+    if (err) {
+      console.error('Error reading file:', err);
+      return res.status(500).json({ error: 'Failed to read the JSON file.', details: err.message });
+    }
+
+    try {
+      const jsonData = JSON.parse(data);
+      const uniqueKeys = extractUniqueKeys(jsonData);
+      res.status(200).json(uniqueKeys);
+    } catch (parseError) {
+      console.error('Error parsing JSON:', parseError);
+      res.status(500).json({ error: 'Failed to parse the JSON file.', details: parseError.message });
+    }
+  });
+});
