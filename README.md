@@ -1,10 +1,12 @@
 Fetches all the users data<br/>
 https://usersdata-4osl.onrender.com/users<br/>
 
-fetches data based on comma separated account_id and cols specified<br/>
-https://usersdata-4osl.onrender.com/users/:account_ids<br/>
+fetches data based on comma separated ids (account_id) and cols specified<br/>
+if a nested field is required, use '.' to nest through the data<br/>
+if theres is a '*' at the end of the column name, it will be ignored<br/>
+https://usersdata-4osl.onrender.com/users<br/>
 ex:<br/>
-https://usersdata-4osl.onrender.com/users/1425,1426?cols=account_id,href,id<br/>
+http://usersdata-4osl.onrender.com/users?ids=2000,2001&cols=id,account_id,name,conditions.rules,conditions.contact_profile_rules,creator.first_name,creator.last_name,updated_by*,conditions.metadata.demographic<br/>
 
 fetches all the unique account id<br/>
 https://usersdata-4osl.onrender.com/unique-account-ids<br/>
