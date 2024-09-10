@@ -1,0 +1,2689 @@
+[
+    {
+        "href": "https://api.boomtrain.net/201507/segments/402001",
+        "id": 402001,
+        "account_id": 2000,
+        "account_name": "CNN",
+        "name": "Segment - Breaking News Subscribers",
+        "description": "Subscribers interested in breaking news alerts",
+        "auto_update": true,
+        "conditions": {
+          "rules": "[\"and\",[\"eq\",\"user.has_active_email\",\"true\"],[\"gte\",\"user.engagement_score\",80]]",
+          "contact_profile_rules": "[\"and\",[\"eq\",\"user.contacts.type\",\"ios_registration_id\"],[\"today\",\"user.contacts.last_opened\"],[\"eq\",\"user.contacts.status\",\"good\"]]",
+          "message_rules": "[\"and\",[\"does\",\"opened\",[\"nudgetoken\",\"[0]acb1234efg567hijklm890nopqr\"]],[\"withinlast\",\"event.activity_timestamp\",\"15\",\"days\"]]",
+          "segment_rules": "[\"ismember\",[\"anyof\",\"f1f2a3b4c5d6e7f8g9h0\",\"h7i8j9k0l1m2n3o4p5q6\"]]",
+          "activity_rules": "[\"and\",[\"does\",\"event.name\",\"[0]breaking_news_clicks\"],[\"withinlast\",\"event.activity_timestamp\",\"7\",\"days\"]]",
+          "experience_rules": "[\"does\",\"experience_entered\",[\"token\",[\"123abc456def789ghi\"]]]",
+          "metadata": {
+            "demographic": "[\"and\",[\"gte\",\"user.age\",25],[\"lte\",\"user.age\",55]]"
+          }
+        },
+        "status": "active",
+        "segment_type": "saved_query",
+        "segment_goal": "engagement",
+        "segment_token": "123abc456def789ghi",
+        "touch_settings": {},
+        "cdp_conditions": {
+          "metadata": {
+            "segments": {}
+          }
+        },
+        "creator_id": 51234,
+        "creator": {
+          "id": 51234,
+          "first_name": "Jane",
+          "last_name": "Doe",
+          "display_name": "Jane Doe",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "updated_by_id": 51234,
+        "updated_by": {
+          "id": 51234,
+          "first_name": "Jane",
+          "last_name": "Doe",
+          "display_name": "Jane Doe",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "created_at": "2024-09-01T10:00:00.000Z",
+        "updated_at": "2024-09-01T11:30:00.000Z",
+        "member_count": 1500,
+        "member_count_updated_at": "2024-09-10T15:00:00+00:00",
+        "segment_creator": "Jane Doe",
+        "resegment_status": null,
+        "segment_source": {},
+        "meta_info": {
+          "multifilters": false,
+          "fast_segment": true
+        },
+        "api_access": true,
+        "external_data_source_id": null,
+        "data_source_type": null,
+        "child_segment_ids": [],
+        "parent_segment_ids": [401900],
+        "segment_population_progress": null,
+        "customer_known_count": 500,
+        "zeta_known_count": 1000,
+        "unknown_count": 0,
+        "version": 1,
+        "excluded_destinations": [],
+        "member_type": "ios_registration_id",
+        "reporting_enabled": true,
+        "auto_archive_enabled": false,
+        "auto_archive_at": null,
+        "restricted": false,
+        "tags": ["breaking_news", "engagement"],
+        "has_presales_audience": true,
+        "fast_segment": true,
+        "dsp_placeholder_id": null
+      },
+      {
+        "href": "https://api.boomtrain.net/201507/segments/402002",
+        "id": 402002,
+        "account_id": 2000,
+        "account_name": "CNN",
+        "name": "Segment - Sports Enthusiasts",
+        "description": "Users interested in sports content",
+        "auto_update": false,
+        "conditions": {
+          "rules": "[\"and\",[\"eq\",\"user.preferences.sport_news\",\"true\"],[\"gte\",\"user.engagement_score\",60]]",
+          "contact_profile_rules": "[\"and\",[\"eq\",\"user.contacts.type\",\"android_registration_id\"],[\"withinlast\",\"user.contacts.last_opened\",\"30\",\"days\"]]",
+          "message_rules": "[\"and\",[\"does\",\"clicked\",[\"nudgetoken\",\"[0]xyz1234uvw5678abcd\"]],[\"withinlast\",\"event.activity_timestamp\",\"10\",\"days\"]]",
+          "segment_rules": "[\"ismember\",[\"anyof\",\"a1b2c3d4e5f6g7h8i9j0\",\"k9l8m7n6o5p4q3r2s1\"]]",
+          "activity_rules": "[\"and\",[\"does\",\"event.name\",\"[0]sports_highlights_viewed\"],[\"withinlast\",\"event.activity_timestamp\",\"5\",\"days\"]]",
+          "experience_rules": "[\"does\",\"experience_entered\",[\"token\",[\"789xyz123abc456def\"]]]",
+          "metadata": {
+            "demographic": "[\"and\",[\"gte\",\"user.age\",18],[\"lte\",\"user.age\",45]]"
+          }
+        },
+        "status": "active",
+        "segment_type": "saved_query",
+        "segment_goal": "retention",
+        "segment_token": "456def789xyz123abc",
+        "touch_settings": {},
+        "cdp_conditions": {
+          "metadata": {
+            "segments": {}
+          }
+        },
+        "creator_id": 51235,
+        "creator": {
+          "id": 51235,
+          "first_name": "John",
+          "last_name": "Smith",
+          "display_name": "John Smith",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "updated_by_id": 51235,
+        "updated_by": {
+          "id": 51235,
+          "first_name": "John",
+          "last_name": "Smith",
+          "display_name": "John Smith",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "created_at": "2024-09-02T10:00:00.000Z",
+        "updated_at": "2024-09-02T11:30:00.000Z",
+        "member_count": 800,
+        "member_count_updated_at": "2024-09-10T15:00:00+00:00",
+        "segment_creator": "John Smith",
+        "resegment_status": null,
+        "segment_source": {},
+        "meta_info": {
+          "multifilters": true,
+          "fast_segment": false
+        },
+        "api_access": false,
+        "external_data_source_id": null,
+        "data_source_type": null,
+        "child_segment_ids": [402003],
+        "parent_segment_ids": [],
+        "segment_population_progress": null,
+        "customer_known_count": 400,
+        "zeta_known_count": 400,
+        "unknown_count": 0,
+        "version": 1,
+        "excluded_destinations": [],
+        "member_type": "android_registration_id",
+        "reporting_enabled": true,
+        "auto_archive_enabled": true,
+        "auto_archive_at": "2025-03-01T10:00:00.000Z",
+        "restricted": true,
+        "tags": ["sports", "retention"],
+        "has_presales_audience": false,
+        "fast_segment": false,
+        "dsp_placeholder_id": null
+      },
+      {
+        "href": "https://api.boomtrain.net/201507/segments/402003",
+        "id": 402003,
+        "account_id": 2000,
+        "account_name": "CNN",
+        "name": "Segment - Political Updates",
+        "description": "Users who frequently engage with political content",
+        "auto_update": true,
+        "conditions": {
+          "rules": "[\"and\",[\"eq\",\"user.has_active_email\",\"true\"],[\"eq\",\"user.preferences.political_news\",\"true\"]]",
+          "contact_profile_rules": "[\"and\",[\"eq\",\"user.contacts.type\",\"email\"],[\"withinlast\",\"user.contacts.last_opened\",\"15\",\"days\"]]",
+          "message_rules": "[\"and\",[\"does\",\"clicked\",[\"nudgetoken\",\"[0]mnop1234qrst5678uvwx\"]],[\"withinlast\",\"event.activity_timestamp\",\"20\",\"days\"]]",
+          "segment_rules": "[\"ismember\",[\"anyof\",\"p1q2r3s4t5u6v7w8x9y0\",\"x8w7v6u5t4s3r2q1p0\"]]",
+          "activity_rules": "[\"and\",[\"does\",\"event.name\",\"[0]politics_news_viewed\"],[\"withinlast\",\"event.activity_timestamp\",\"30\",\"days\"]]",
+          "experience_rules": "[\"does\",\"experience_entered\",[\"token\",[\"987ghi654jkl321mno\"]]]",
+          "metadata": {
+            "demographic": "[\"and\",[\"in\",\"user.gender\",[\"anyof\",\"F\",\"Female\"]],[\"gte\",\"user.age\",30],[\"lte\",\"user.age\",65]]"
+          }
+        },
+        "status": "active",
+        "segment_type": "saved_query",
+        "segment_goal": "engagement",
+        "segment_token": "789mno321jkl654ghi",
+        "touch_settings": {},
+        "cdp_conditions": {
+          "metadata": {
+            "segments": {}
+          }
+        },
+        "creator_id": 51236,
+        "creator": {
+          "id": 51236,
+          "first_name": "Alice",
+          "last_name": "Johnson",
+          "display_name": "Alice Johnson",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "updated_by_id": 51236,
+        "updated_by": {
+          "id": 51236,
+          "first_name": "Alice",
+          "last_name": "Johnson",
+          "display_name": "Alice Johnson",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "created_at": "2024-09-03T10:00:00.000Z",
+        "updated_at": "2024-09-03T11:30:00.000Z",
+        "member_count": 1200,
+        "member_count_updated_at": "2024-09-10T15:00:00+00:00",
+        "segment_creator": "Alice Johnson",
+        "resegment_status": null,
+        "segment_source": {},
+        "meta_info": {
+          "multifilters": true,
+          "fast_segment": true
+        },
+        "api_access": true,
+        "external_data_source_id": null,
+        "data_source_type": null,
+        "child_segment_ids": [],
+        "parent_segment_ids": [402001],
+        "segment_population_progress": null,
+        "customer_known_count": 600,
+        "zeta_known_count": 600,
+        "unknown_count": 0,
+        "version": 1,
+        "excluded_destinations": [],
+        "member_type": "email",
+        "reporting_enabled": true,
+        "auto_archive_enabled": false,
+        "auto_archive_at": null,
+        "restricted": false,
+        "tags": ["politics", "engagement"],
+        "has_presales_audience": false,
+        "fast_segment": true,
+        "dsp_placeholder_id": null
+      },
+      {
+        "href": "https://api.boomtrain.net/201507/segments/402004",
+        "id": 402004,
+        "account_id": 2000,
+        "account_name": "CNN",
+        "name": "Segment - Morning Briefing Subscribers",
+        "description": "Users subscribed to receive daily morning briefings",
+        "auto_update": false,
+        "conditions": {
+          "rules": "[\"and\",[\"eq\",\"user.subscription.morning_briefing\",\"true\"],[\"gte\",\"user.engagement_score\",70]]",
+          "contact_profile_rules": "[\"and\",[\"eq\",\"user.contacts.type\",\"email\"],[\"today\",\"user.contacts.last_opened\"]]",
+          "message_rules": "[\"and\",[\"does\",\"opened\",[\"nudgetoken\",\"[0]ghij5678klmn1234opqr\"]],[\"withinlast\",\"event.activity_timestamp\",\"1\",\"days\"]]",
+          "segment_rules": "[\"ismember\",[\"anyof\",\"z9y8x7w6v5u4t3s2r1p0\",\"o1p2q3r4s5t6u7v8w9x0\"]]",
+          "activity_rules": "[\"and\",[\"does\",\"event.name\",\"[0]morning_briefing_opened\"],[\"withinlast\",\"event.activity_timestamp\",\"7\",\"days\"]]",
+          "experience_rules": "[\"does\",\"experience_entered\",[\"token\",[\"654uvw321rst987lmn\"]]]",
+          "metadata": {
+            "demographic": "[\"and\",[\"gte\",\"user.age\",20],[\"lte\",\"user.age\",40]]"
+          }
+        },
+        "status": "active",
+        "segment_type": "saved_query",
+        "segment_goal": "acquisition",
+        "segment_token": "321rst987uvw654lmn",
+        "touch_settings": {},
+        "cdp_conditions": {
+          "metadata": {
+            "segments": {}
+          }
+        },
+        "creator_id": 51237,
+        "creator": {
+          "id": 51237,
+          "first_name": "Bob",
+          "last_name": "Martin",
+          "display_name": "Bob Martin",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "updated_by_id": 51237,
+        "updated_by": {
+          "id": 51237,
+          "first_name": "Bob",
+          "last_name": "Martin",
+          "display_name": "Bob Martin",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "created_at": "2024-09-04T10:00:00.000Z",
+        "updated_at": "2024-09-04T11:30:00.000Z",
+        "member_count": 2000,
+        "member_count_updated_at": "2024-09-10T15:00:00+00:00",
+        "segment_creator": "Bob Martin",
+        "resegment_status": null,
+        "segment_source": {},
+        "meta_info": {
+          "multifilters": false,
+          "fast_segment": false
+        },
+        "api_access": true,
+        "external_data_source_id": null,
+        "data_source_type": null,
+        "child_segment_ids": [],
+        "parent_segment_ids": [],
+        "segment_population_progress": null,
+        "customer_known_count": 1500,
+        "zeta_known_count": 500,
+        "unknown_count": 0,
+        "version": 1,
+        "excluded_destinations": [],
+        "member_type": "email",
+        "reporting_enabled": true,
+        "auto_archive_enabled": true,
+        "auto_archive_at": "2025-02-15T10:00:00.000Z",
+        "restricted": false,
+        "tags": ["morning_briefing", "acquisition"],
+        "has_presales_audience": false,
+        "fast_segment": false,
+        "dsp_placeholder_id": null
+      },
+      {
+        "href": "https://api.boomtrain.net/201507/segments/402005",
+        "id": 402005,
+        "account_id": 2000,
+        "account_name": "CNN",
+        "name": "Segment - Tech News Fans",
+        "description": "Users interested in technology and innovation news",
+        "auto_update": true,
+        "conditions": {
+          "rules": "[\"and\",[\"eq\",\"user.preferences.tech_news\",\"true\"],[\"gte\",\"user.engagement_score\",90]]",
+          "contact_profile_rules": "[\"and\",[\"eq\",\"user.contacts.type\",\"android_registration_id\"],[\"withinlast\",\"user.contacts.last_opened\",\"5\",\"days\"]]",
+          "message_rules": "[\"and\",[\"does\",\"opened\",[\"nudgetoken\",\"[0]abcd5678efgh1234ijkl\"]],[\"withinlast\",\"event.activity_timestamp\",\"2\",\"days\"]]",
+          "segment_rules": "[\"ismember\",[\"anyof\",\"l9m8n7o6p5q4r3s2t1u0\",\"u1v2w3x4y5z6a7b8c9d0\"]]",
+          "activity_rules": "[\"and\",[\"does\",\"event.name\",\"[0]tech_article_viewed\"],[\"withinlast\",\"event.activity_timestamp\",\"7\",\"days\"]]",
+          "experience_rules": "[\"does\",\"experience_entered\",[\"token\",[\"112abc223def334ghi\"]]]",
+          "metadata": {
+            "demographic": "[\"and\",[\"gte\",\"user.age\",25],[\"lte\",\"user.age\",50]]"
+          }
+        },
+        "status": "active",
+        "segment_type": "saved_query",
+        "segment_goal": "engagement",
+        "segment_token": "223def334ghi112abc",
+        "touch_settings": {},
+        "cdp_conditions": {
+          "metadata": {
+            "segments": {}
+          }
+        },
+        "creator_id": 51238,
+        "creator": {
+          "id": 51238,
+          "first_name": "Carol",
+          "last_name": "Smith",
+          "display_name": "Carol Smith",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "updated_by_id": 51238,
+        "updated_by": {
+          "id": 51238,
+          "first_name": "Carol",
+          "last_name": "Smith",
+          "display_name": "Carol Smith",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "created_at": "2024-09-05T09:00:00.000Z",
+        "updated_at": "2024-09-05T10:45:00.000Z",
+        "member_count": 1500,
+        "member_count_updated_at": "2024-09-10T15:00:00+00:00",
+        "segment_creator": "Carol Smith",
+        "resegment_status": null,
+        "segment_source": {},
+        "meta_info": {
+          "multifilters": true,
+          "fast_segment": true
+        },
+        "api_access": false,
+        "external_data_source_id": null,
+        "data_source_type": null,
+        "child_segment_ids": [],
+        "parent_segment_ids": [],
+        "segment_population_progress": null,
+        "customer_known_count": 800,
+        "zeta_known_count": 700,
+        "unknown_count": 0,
+        "version": 2,
+        "excluded_destinations": [],
+        "member_type": "android_registration_id",
+        "reporting_enabled": true,
+        "auto_archive_enabled": true,
+        "auto_archive_at": "2025-03-01T09:00:00.000Z",
+        "restricted": false,
+        "tags": ["tech", "innovation", "news"],
+        "has_presales_audience": true,
+        "fast_segment": true,
+        "dsp_placeholder_id": null
+      },
+      {
+        "href": "https://api.boomtrain.net/201507/segments/402006",
+        "id": 402006,
+        "account_id": 2001,
+        "account_name": "CNN US",
+        "name": "Segment - Breaking News Alerts",
+        "description": "Users subscribed to receive breaking news alerts",
+        "auto_update": true,
+        "conditions": {
+          "rules": "[\"and\",[\"eq\",\"user.subscription.breaking_news\",\"true\"],[\"gte\",\"user.engagement_score\",75]]",
+          "contact_profile_rules": "[\"and\",[\"eq\",\"user.contacts.type\",\"sms\"],[\"withinlast\",\"user.contacts.last_opened\",\"2\",\"days\"]]",
+          "message_rules": "[\"and\",[\"does\",\"clicked\",[\"nudgetoken\",\"[0]5678mnop1234qrst\"]],[\"withinlast\",\"event.activity_timestamp\",\"1\",\"days\"]]",
+          "segment_rules": "[\"ismember\",[\"anyof\",\"d9c8b7a6f5e4g3h2i1j0\",\"z1y2x3w4v5u6t7s8r9q0\"]]",
+          "activity_rules": "[\"and\",[\"does\",\"event.name\",\"[0]breaking_news_viewed\"],[\"withinlast\",\"event.activity_timestamp\",\"3\",\"days\"]]",
+          "experience_rules": "[\"does\",\"experience_entered\",[\"token\",[\"555mno666pqr777stu\"]]]",
+          "metadata": {
+            "demographic": "[\"and\",[\"gte\",\"user.age\",18],[\"lte\",\"user.age\",65]]"
+          }
+        },
+        "status": "active",
+        "segment_type": "saved_query",
+        "segment_goal": "retention",
+        "segment_token": "777stu555mno666pqr",
+        "touch_settings": {},
+        "cdp_conditions": {
+          "metadata": {
+            "segments": {}
+          }
+        },
+        "creator_id": 51239,
+        "creator": {
+          "id": 51239,
+          "first_name": "David",
+          "last_name": "Williams",
+          "display_name": "David Williams",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "updated_by_id": 51239,
+        "updated_by": {
+          "id": 51239,
+          "first_name": "David",
+          "last_name": "Williams",
+          "display_name": "David Williams",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "created_at": "2024-09-06T08:30:00.000Z",
+        "updated_at": "2024-09-06T10:15:00.000Z",
+        "member_count": 1800,
+        "member_count_updated_at": "2024-09-10T15:00:00+00:00",
+        "segment_creator": "David Williams",
+        "resegment_status": null,
+        "segment_source": {},
+        "meta_info": {
+          "multifilters": false,
+          "fast_segment": true
+        },
+        "api_access": false,
+        "external_data_source_id": null,
+        "data_source_type": null,
+        "child_segment_ids": [],
+        "parent_segment_ids": [],
+        "segment_population_progress": null,
+        "customer_known_count": 1200,
+        "zeta_known_count": 600,
+        "unknown_count": 0,
+        "version": 1,
+        "excluded_destinations": [],
+        "member_type": "sms",
+        "reporting_enabled": true,
+        "auto_archive_enabled": true,
+        "auto_archive_at": "2025-02-20T08:30:00.000Z",
+        "restricted": false,
+        "tags": ["breaking_news", "alerts"],
+        "has_presales_audience": false,
+        "fast_segment": true,
+        "dsp_placeholder_id": null
+      },
+      {
+        "href": "https://api.boomtrain.net/201507/segments/402007",
+        "id": 402007,
+        "account_id": 2001,
+        "account_name": "CNN US",
+        "name": "Segment - Sports Enthusiasts",
+        "description": "Users who frequently read or engage with sports content",
+        "auto_update": false,
+        "conditions": {
+          "rules": "[\"and\",[\"eq\",\"user.preferences.sports_news\",\"true\"],[\"gte\",\"user.engagement_score\",85]]",
+          "contact_profile_rules": "[\"and\",[\"eq\",\"user.contacts.type\",\"push_notification\"],[\"withinlast\",\"user.contacts.last_opened\",\"7\",\"days\"]]",
+          "message_rules": "[\"and\",[\"does\",\"opened\",[\"nudgetoken\",\"[0]abcd1234efgh5678ijkl\"]],[\"withinlast\",\"event.activity_timestamp\",\"3\",\"days\"]]",
+          "segment_rules": "[\"ismember\",[\"anyof\",\"y9x8w7v6u5t4s3r2q1p0\",\"p1o2n3m4l5k6j7i8h9g0\"]]",
+          "activity_rules": "[\"and\",[\"does\",\"event.name\",\"[0]sports_article_viewed\"],[\"withinlast\",\"event.activity_timestamp\",\"5\",\"days\"]]",
+          "experience_rules": "[\"does\",\"experience_entered\",[\"token\",[\"123xyz456uvw789rst\"]]]",
+          "metadata": {
+            "demographic": "[\"and\",[\"gte\",\"user.age\",22],[\"lte\",\"user.age\",55]]"
+          }
+        },
+        "status": "active",
+        "segment_type": "saved_query",
+        "segment_goal": "engagement",
+        "segment_token": "789rst123xyz456uvw",
+        "touch_settings": {},
+        "cdp_conditions": {
+          "metadata": {
+            "segments": {}
+          }
+        },
+        "creator_id": 51240,
+        "creator": {
+          "id": 51240,
+          "first_name": "Emily",
+          "last_name": "Clark",
+          "display_name": "Emily Clark",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "updated_by_id": 51240,
+        "updated_by": {
+          "id": 51240,
+          "first_name": "Emily",
+          "last_name": "Clark",
+          "display_name": "Emily Clark",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "created_at": "2024-09-07T09:00:00.000Z",
+        "updated_at": "2024-09-07T11:30:00.000Z",
+        "member_count": 2200,
+        "member_count_updated_at": "2024-09-10T15:00:00+00:00",
+        "segment_creator": "Emily Clark",
+        "resegment_status": null,
+        "segment_source": {},
+        "meta_info": {
+          "multifilters": true,
+          "fast_segment": false
+        },
+        "api_access": true,
+        "external_data_source_id": null,
+        "data_source_type": null,
+        "child_segment_ids": [],
+        "parent_segment_ids": [402006],
+        "segment_population_progress": null,
+        "customer_known_count": 1800,
+        "zeta_known_count": 400,
+        "unknown_count": 0,
+        "version": 2,
+        "excluded_destinations": [],
+        "member_type": "push_notification",
+        "reporting_enabled": true,
+        "auto_archive_enabled": false,
+        "auto_archive_at": null,
+        "restricted": false,
+        "tags": ["sports", "engagement"],
+        "has_presales_audience": false,
+        "fast_segment": false,
+        "dsp_placeholder_id": null
+      },
+      {
+        "href": "https://api.boomtrain.net/201507/segments/402008",
+        "id": 402008,
+        "account_id": 2001,
+        "account_name": "CNN US",
+        "name": "Segment - Entertainment Buffs",
+        "description": "Users who are highly engaged with entertainment news and content",
+        "auto_update": true,
+        "conditions": {
+          "rules": "[\"and\",[\"eq\",\"user.preferences.entertainment_news\",\"true\"],[\"gte\",\"user.engagement_score\",95]]",
+          "contact_profile_rules": "[\"and\",[\"eq\",\"user.contacts.type\",\"email\"],[\"withinlast\",\"user.contacts.last_opened\",\"10\",\"days\"]]",
+          "message_rules": "[\"and\",[\"does\",\"opened\",[\"nudgetoken\",\"[0]efgh5678ijkl1234mnop\"]],[\"withinlast\",\"event.activity_timestamp\",\"7\",\"days\"]]",
+          "segment_rules": "[\"ismember\",[\"anyof\",\"q9r8s7t6u5v4w3x2y1z0\",\"z0y1x2w3v4u5t6s7r8q9\"]]",
+          "activity_rules": "[\"and\",[\"does\",\"event.name\",\"[0]entertainment_video_viewed\"],[\"withinlast\",\"event.activity_timestamp\",\"10\",\"days\"]]",
+          "experience_rules": "[\"does\",\"experience_entered\",[\"token\",[\"888opq999rst000uvw\"]]]",
+          "metadata": {
+            "demographic": "[\"and\",[\"gte\",\"user.age\",20],[\"lte\",\"user.age\",60]]"
+          }
+        },
+        "status": "active",
+        "segment_type": "saved_query",
+        "segment_goal": "growth",
+        "segment_token": "000uvw888opq999rst",
+        "touch_settings": {},
+        "cdp_conditions": {
+          "metadata": {
+            "segments": {}
+          }
+        },
+        "creator_id": 51241,
+        "creator": {
+          "id": 51241,
+          "first_name": "Michael",
+          "last_name": "Johnson",
+          "display_name": "Michael Johnson",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "updated_by_id": 51241,
+        "updated_by": {
+          "id": 51241,
+          "first_name": "Michael",
+          "last_name": "Johnson",
+          "display_name": "Michael Johnson",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "created_at": "2024-09-08T10:00:00.000Z",
+        "updated_at": "2024-09-08T12:00:00.000Z",
+        "member_count": 2000,
+        "member_count_updated_at": "2024-09-10T15:00:00+00:00",
+        "segment_creator": "Michael Johnson",
+        "resegment_status": null,
+        "segment_source": {},
+        "meta_info": {
+          "multifilters": true,
+          "fast_segment": true
+        },
+        "api_access": true,
+        "external_data_source_id": null,
+        "data_source_type": null,
+        "child_segment_ids": [],
+        "parent_segment_ids": [402007],
+        "segment_population_progress": null,
+        "customer_known_count": 1300,
+        "zeta_known_count": 700,
+        "unknown_count": 0,
+        "version": 3,
+        "excluded_destinations": [],
+        "member_type": "email",
+        "reporting_enabled": true,
+        "auto_archive_enabled": false,
+        "auto_archive_at": null,
+        "restricted": true,
+        "tags": ["entertainment", "news", "growth"],
+        "has_presales_audience": false,
+        "fast_segment": true,
+        "dsp_placeholder_id": null
+      },
+      {
+        "href": "https://api.boomtrain.net/201507/segments/403001",
+        "id": 403001,
+        "account_id": 2002,
+        "account_name": "FNBO PROD",
+        "name": "Segment - Credit Card Promotion Responders",
+        "description": "Users who responded to recent credit card promotions",
+        "auto_update": true,
+        "conditions": {
+          "rules": "[\"and\",[\"eq\",\"user.preferences.credit_card_promo\",\"true\"],[\"gte\",\"user.engagement_score\",80]]",
+          "contact_profile_rules": "[\"and\",[\"eq\",\"user.contacts.type\",\"email\"],[\"withinlast\",\"user.contacts.last_opened\",\"5\",\"days\"]]",
+          "message_rules": "[\"and\",[\"does\",\"clicked\",[\"nudgetoken\",\"[0]ccpromo1234abcd5678\"]],[\"withinlast\",\"event.activity_timestamp\",\"15\",\"days\"]]",
+          "segment_rules": "[\"ismember\",[\"anyof\",\"a1b2c3d4e5f6g7h8i9j0\",\"z9y8x7w6v5u4t3s2r1q0\"]]",
+          "activity_rules": "[\"and\",[\"does\",\"event.name\",\"[0]credit_card_signup\"],[\"withinlast\",\"event.activity_timestamp\",\"20\",\"days\"]]",
+          "experience_rules": "[\"does\",\"experience_entered\",[\"token\",[\"abc111def222ghi333\"]]]",
+          "metadata": {
+            "demographic": "[\"and\",[\"gte\",\"user.age\",25],[\"lte\",\"user.age\",65]]"
+          }
+        },
+        "status": "active",
+        "segment_type": "saved_query",
+        "segment_goal": "acquisition",
+        "segment_token": "ghi333abc111def222",
+        "touch_settings": {},
+        "cdp_conditions": {
+          "metadata": {
+            "segments": {}
+          }
+        },
+        "creator_id": 61234,
+        "creator": {
+          "id": 61234,
+          "first_name": "Sarah",
+          "last_name": "Davis",
+          "display_name": "Sarah Davis",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "updated_by_id": 61234,
+        "updated_by": {
+          "id": 61234,
+          "first_name": "Sarah",
+          "last_name": "Davis",
+          "display_name": "Sarah Davis",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "created_at": "2024-09-09T14:00:00.000Z",
+        "updated_at": "2024-09-09T16:00:00.000Z",
+        "member_count": 3200,
+        "member_count_updated_at": "2024-09-10T18:00:00+00:00",
+        "segment_creator": "Sarah Davis",
+        "resegment_status": null,
+        "segment_source": {},
+        "meta_info": {
+          "multifilters": false,
+          "fast_segment": true
+        },
+        "api_access": false,
+        "external_data_source_id": null,
+        "data_source_type": null,
+        "child_segment_ids": [],
+        "parent_segment_ids": [],
+        "segment_population_progress": null,
+        "customer_known_count": 2900,
+        "zeta_known_count": 300,
+        "unknown_count": 0,
+        "version": 1,
+        "excluded_destinations": [],
+        "member_type": "email",
+        "reporting_enabled": true,
+        "auto_archive_enabled": true,
+        "auto_archive_at": "2025-02-28T14:00:00.000Z",
+        "restricted": false,
+        "tags": ["credit_card", "promotion", "acquisition"],
+        "has_presales_audience": false,
+        "fast_segment": true,
+        "dsp_placeholder_id": null
+      },
+      {
+        "href": "https://api.boomtrain.net/201507/segments/403002",
+        "id": 403002,
+        "account_id": 2002,
+        "account_name": "FNBO PROD",
+        "name": "Segment - Loan Interest Rate Cut Responders",
+        "description": "Users who showed interest in loan rate cut promotions",
+        "auto_update": false,
+        "conditions": {
+          "rules": "[\"and\",[\"eq\",\"user.preferences.loan_rate_cut\",\"true\"],[\"gte\",\"user.engagement_score\",70]]",
+          "contact_profile_rules": "[\"and\",[\"eq\",\"user.contacts.type\",\"push_notification\"],[\"withinlast\",\"user.contacts.last_opened\",\"3\",\"days\"]]",
+          "message_rules": "[\"and\",[\"does\",\"opened\",[\"nudgetoken\",\"[0]loanpromo5678efgh\"]],[\"withinlast\",\"event.activity_timestamp\",\"10\",\"days\"]]",
+          "segment_rules": "[\"ismember\",[\"anyof\",\"m1n2o3p4q5r6s7t8u9v0\",\"v9u8t7s6r5q4p3o2n1m0\"]]",
+          "activity_rules": "[\"and\",[\"does\",\"event.name\",\"[0]loan_inquiry_submitted\"],[\"withinlast\",\"event.activity_timestamp\",\"30\",\"days\"]]",
+          "experience_rules": "[\"does\",\"experience_entered\",[\"token\",[\"jkl444mno555pqr666\"]]]",
+          "metadata": {
+            "demographic": "[\"and\",[\"gte\",\"user.age\",30],[\"lte\",\"user.age\",55]]"
+          }
+        },
+        "status": "active",
+        "segment_type": "saved_query",
+        "segment_goal": "retention",
+        "segment_token": "pqr666jkl444mno555",
+        "touch_settings": {},
+        "cdp_conditions": {
+          "metadata": {
+            "segments": {}
+          }
+        },
+        "creator_id": 61235,
+        "creator": {
+          "id": 61235,
+          "first_name": "John",
+          "last_name": "Smith",
+          "display_name": "John Smith",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "updated_by_id": 61235,
+        "updated_by": {
+          "id": 61235,
+          "first_name": "John",
+          "last_name": "Smith",
+          "display_name": "John Smith",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "created_at": "2024-09-10T08:30:00.000Z",
+        "updated_at": "2024-09-10T10:30:00.000Z",
+        "member_count": 1500,
+        "member_count_updated_at": "2024-09-10T18:00:00+00:00",
+        "segment_creator": "John Smith",
+        "resegment_status": null,
+        "segment_source": {},
+        "meta_info": {
+          "multifilters": true,
+          "fast_segment": false
+        },
+        "api_access": true,
+        "external_data_source_id": null,
+        "data_source_type": null,
+        "child_segment_ids": [],
+        "parent_segment_ids": [],
+        "segment_population_progress": null,
+        "customer_known_count": 1200,
+        "zeta_known_count": 300,
+        "unknown_count": 0,
+        "version": 2,
+        "excluded_destinations": [],
+        "member_type": "push_notification",
+        "reporting_enabled": true,
+        "auto_archive_enabled": false,
+        "auto_archive_at": null,
+        "restricted": false,
+        "tags": ["loan", "promotion", "retention"],
+        "has_presales_audience": false,
+        "fast_segment": false,
+        "dsp_placeholder_id": null
+      },
+      {
+        "href": "https://api.boomtrain.net/201507/segments/403003",
+        "id": 403003,
+        "account_id": 2002,
+        "account_name": "FNBO PROD",
+        "name": "Segment - High Net Worth Customers",
+        "description": "Users identified as high net worth for exclusive offers",
+        "auto_update": true,
+        "conditions": {
+          "rules": "[\"and\",[\"gte\",\"user.income\",150000],[\"eq\",\"user.high_net_worth\",\"true\"]]",
+          "contact_profile_rules": "[\"and\",[\"eq\",\"user.contacts.type\",\"email\"],[\"withinlast\",\"user.contacts.last_opened\",\"7\",\"days\"]]",
+          "message_rules": "[\"and\",[\"does\",\"clicked\",[\"nudgetoken\",\"[0]wealthpromoabcd1234\"]],[\"withinlast\",\"event.activity_timestamp\",\"14\",\"days\"]]",
+          "segment_rules": "[\"ismember\",[\"anyof\",\"w1x2y3z4a5b6c7d8e9f0\",\"f0e9d8c7b6a5z4y3x2w1\"]]",
+          "activity_rules": "[\"and\",[\"does\",\"event.name\",\"[0]wealth_management_inquiry\"],[\"withinlast\",\"event.activity_timestamp\",\"30\",\"days\"]]",
+          "experience_rules": "[\"does\",\"experience_entered\",[\"token\",[\"xyz999abc888def777\"]]]",
+          "metadata": {
+            "demographic": "[\"and\",[\"gte\",\"user.age\",40],[\"lte\",\"user.age\",70]]"
+          }
+        },
+        "status": "active",
+        "segment_type": "saved_query",
+        "segment_goal": "engagement",
+        "segment_token": "abc888xyz999def777",
+        "touch_settings": {},
+        "cdp_conditions": {
+          "metadata": {
+            "segments": {}
+          }
+        },
+        "creator_id": 61236,
+        "creator": {
+          "id": 61236,
+          "first_name": "Emily",
+          "last_name": "Brown",
+          "display_name": "Emily Brown",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "updated_by_id": 61236,
+        "updated_by": {
+          "id": 61236,
+          "first_name": "Emily",
+          "last_name": "Brown",
+          "display_name": "Emily Brown",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "created_at": "2024-09-11T09:00:00.000Z",
+        "updated_at": "2024-09-11T11:00:00.000Z",
+        "member_count": 850,
+        "member_count_updated_at": "2024-09-11T12:00:00+00:00",
+        "segment_creator": "Emily Brown",
+        "resegment_status": null,
+        "segment_source": {},
+        "meta_info": {
+          "multifilters": true,
+          "fast_segment": false
+        },
+        "api_access": true,
+        "external_data_source_id": null,
+        "data_source_type": null,
+        "child_segment_ids": [],
+        "parent_segment_ids": [],
+        "segment_population_progress": null,
+        "customer_known_count": 750,
+        "zeta_known_count": 100,
+        "unknown_count": 0,
+        "version": 2,
+        "excluded_destinations": [],
+        "member_type": "email",
+        "reporting_enabled": true,
+        "auto_archive_enabled": false,
+        "auto_archive_at": null,
+        "restricted": false,
+        "tags": ["high_net_worth", "exclusive_offers", "engagement"],
+        "has_presales_audience": false,
+        "fast_segment": false,
+        "dsp_placeholder_id": null
+      },
+      {
+        "href": "https://api.boomtrain.net/201507/segments/403004",
+        "id": 403004,
+        "account_id": 2002,
+        "account_name": "FNBO PROD",
+        "name": "Segment - Digital Banking Frequent Users",
+        "description": "Users who frequently use the digital banking platform",
+        "auto_update": true,
+        "conditions": {
+          "rules": "[\"and\",[\"gte\",\"user.login_frequency\",\"10\"],[\"eq\",\"user.digital_banking_user\",\"true\"]]",
+          "contact_profile_rules": "[\"and\",[\"eq\",\"user.contacts.type\",\"sms\"],[\"withinlast\",\"user.contacts.last_opened\",\"2\",\"days\"]]",
+          "message_rules": "[\"and\",[\"does\",\"opened\",[\"nudgetoken\",\"[0]dbankingpromo12345\"]],[\"withinlast\",\"event.activity_timestamp\",\"7\",\"days\"]]",
+          "segment_rules": "[\"ismember\",[\"anyof\",\"p1q2r3s4t5u6v7w8x9y0\",\"y9x8w7v6u5t4s3r2q1p0\"]]",
+          "activity_rules": "[\"and\",[\"does\",\"event.name\",\"[0]fund_transfer\"],[\"withinlast\",\"event.activity_timestamp\",\"15\",\"days\"]]",
+          "experience_rules": "[\"does\",\"experience_entered\",[\"token\",[\"mnop1234qrst5678\"]]]",
+          "metadata": {
+            "demographic": "[\"and\",[\"gte\",\"user.age\",20],[\"lte\",\"user.age\",50]]"
+          }
+        },
+        "status": "active",
+        "segment_type": "saved_query",
+        "segment_goal": "engagement",
+        "segment_token": "qrst5678mnop1234",
+        "touch_settings": {},
+        "cdp_conditions": {
+          "metadata": {
+            "segments": {}
+          }
+        },
+        "creator_id": 61237,
+        "creator": {
+          "id": 61237,
+          "first_name": "James",
+          "last_name": "Anderson",
+          "display_name": "James Anderson",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "updated_by_id": 61237,
+        "updated_by": {
+          "id": 61237,
+          "first_name": "James",
+          "last_name": "Anderson",
+          "display_name": "James Anderson",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "created_at": "2024-09-12T10:00:00.000Z",
+        "updated_at": "2024-09-12T11:30:00.000Z",
+        "member_count": 2300,
+        "member_count_updated_at": "2024-09-12T13:00:00+00:00",
+        "segment_creator": "James Anderson",
+        "resegment_status": null,
+        "segment_source": {},
+        "meta_info": {
+          "multifilters": false,
+          "fast_segment": true
+        },
+        "api_access": false,
+        "external_data_source_id": null,
+        "data_source_type": null,
+        "child_segment_ids": [],
+        "parent_segment_ids": [],
+        "segment_population_progress": null,
+        "customer_known_count": 2100,
+        "zeta_known_count": 200,
+        "unknown_count": 0,
+        "version": 1,
+        "excluded_destinations": [],
+        "member_type": "sms",
+        "reporting_enabled": true,
+        "auto_archive_enabled": true,
+        "auto_archive_at": "2025-03-01T10:00:00.000Z",
+        "restricted": true,
+        "tags": ["digital_banking", "frequent_users", "engagement"],
+        "has_presales_audience": false,
+        "fast_segment": true,
+        "dsp_placeholder_id": null
+      },
+      {
+        "href": "https://api.boomtrain.net/201507/segments/404001",
+        "id": 404001,
+        "account_id": 2003,
+        "account_name": "FNBO EU",
+        "name": "Segment - Premium Account Holders",
+        "description": "Users with premium accounts for targeted offers",
+        "auto_update": true,
+        "conditions": {
+          "rules": "[\"and\",[\"eq\",\"user.account_type\",\"premium\"],[\"gte\",\"user.account_balance\",10000]]",
+          "contact_profile_rules": "[\"and\",[\"eq\",\"user.contacts.type\",\"email\"],[\"withinlast\",\"user.contacts.last_opened\",\"7\",\"days\"]]",
+          "message_rules": "[\"and\",[\"does\",\"opened\",[\"nudgetoken\",\"[0]premiumoffer12345\"]],[\"withinlast\",\"event.activity_timestamp\",\"14\",\"days\"]]",
+          "segment_rules": "[\"ismember\",[\"anyof\",\"x1y2z3a4b5c6d7e8f9g0\",\"g0f9e8d7c6b5a4z3y2x1\"]]",
+          "activity_rules": "[\"and\",[\"does\",\"event.name\",\"[0]premium_feature_access\"],[\"withinlast\",\"event.activity_timestamp\",\"30\",\"days\"]]",
+          "experience_rules": "[\"does\",\"experience_entered\",[\"token\",[\"def456ghi789jkl000\"]]]",
+          "metadata": {
+            "demographic": "[\"and\",[\"gte\",\"user.age\",30],[\"lte\",\"user.age\",60]]"
+          }
+        },
+        "status": "active",
+        "segment_type": "saved_query",
+        "segment_goal": "engagement",
+        "segment_token": "jkl000def456ghi789",
+        "touch_settings": {},
+        "cdp_conditions": {
+          "metadata": {
+            "segments": {}
+          }
+        },
+        "creator_id": 71234,
+        "creator": {
+          "id": 71234,
+          "first_name": "Laura",
+          "last_name": "Miller",
+          "display_name": "Laura Miller",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "updated_by_id": 71234,
+        "updated_by": {
+          "id": 71234,
+          "first_name": "Laura",
+          "last_name": "Miller",
+          "display_name": "Laura Miller",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "created_at": "2024-09-13T11:00:00.000Z",
+        "updated_at": "2024-09-13T13:00:00.000Z",
+        "member_count": 1200,
+        "member_count_updated_at": "2024-09-13T14:00:00+00:00",
+        "segment_creator": "Laura Miller",
+        "resegment_status": null,
+        "segment_source": {},
+        "meta_info": {
+          "multifilters": true,
+          "fast_segment": true
+        },
+        "api_access": true,
+        "external_data_source_id": null,
+        "data_source_type": null,
+        "child_segment_ids": [],
+        "parent_segment_ids": [],
+        "segment_population_progress": null,
+        "customer_known_count": 1100,
+        "zeta_known_count": 100,
+        "unknown_count": 0,
+        "version": 1,
+        "excluded_destinations": [],
+        "member_type": "email",
+        "reporting_enabled": true,
+        "auto_archive_enabled": true,
+        "auto_archive_at": "2025-03-15T11:00:00.000Z",
+        "restricted": false,
+        "tags": ["premium_account", "high_balance", "engagement"],
+        "has_presales_audience": false,
+        "fast_segment": true,
+        "dsp_placeholder_id": null
+      },
+      {
+        "href": "https://api.boomtrain.net/201507/segments/404002",
+        "id": 404002,
+        "account_id": 2003,
+        "account_name": "FNBO EU",
+        "name": "Segment - Recent Loan Applicants",
+        "description": "Users who have recently applied for a loan",
+        "auto_update": false,
+        "conditions": {
+          "rules": "[\"and\",[\"eq\",\"user.loan_application_status\",\"applied\"],[\"withinlast\",\"user.loan_application_date\",\"30\",\"days\"]]",
+          "contact_profile_rules": "[\"and\",[\"eq\",\"user.contacts.type\",\"phone\"],[\"withinlast\",\"user.contacts.last_opened\",\"10\",\"days\"]]",
+          "message_rules": "[\"and\",[\"does\",\"clicked\",[\"nudgetoken\",\"[0]loanpromo6789abcd\"]],[\"withinlast\",\"event.activity_timestamp\",\"20\",\"days\"]]",
+          "segment_rules": "[\"ismember\",[\"anyof\",\"r1s2t3u4v5w6x7y8z0\",\"z0y8x7w6v5u4t3s2r1q\"]]",
+          "activity_rules": "[\"and\",[\"does\",\"event.name\",\"[0]loan_status_check\"],[\"withinlast\",\"event.activity_timestamp\",\"45\",\"days\"]]",
+          "experience_rules": "[\"does\",\"experience_entered\",[\"token\",[\"uvw123xyz456rst789\"]]]",
+          "metadata": {
+            "demographic": "[\"and\",[\"gte\",\"user.age\",25],[\"lte\",\"user.age\",50]]"
+          }
+        },
+        "status": "active",
+        "segment_type": "saved_query",
+        "segment_goal": "conversion",
+        "segment_token": "rst789uvw123xyz456",
+        "touch_settings": {},
+        "cdp_conditions": {
+          "metadata": {
+            "segments": {}
+          }
+        },
+        "creator_id": 71235,
+        "creator": {
+          "id": 71235,
+          "first_name": "Oliver",
+          "last_name": "Taylor",
+          "display_name": "Oliver Taylor",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "updated_by_id": 71235,
+        "updated_by": {
+          "id": 71235,
+          "first_name": "Oliver",
+          "last_name": "Taylor",
+          "display_name": "Oliver Taylor",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "created_at": "2024-09-14T10:00:00.000Z",
+        "updated_at": "2024-09-14T11:30:00.000Z",
+        "member_count": 1800,
+        "member_count_updated_at": "2024-09-14T13:00:00+00:00",
+        "segment_creator": "Oliver Taylor",
+        "resegment_status": null,
+        "segment_source": {},
+        "meta_info": {
+          "multifilters": true,
+          "fast_segment": false
+        },
+        "api_access": true,
+        "external_data_source_id": null,
+        "data_source_type": null,
+        "child_segment_ids": [],
+        "parent_segment_ids": [],
+        "segment_population_progress": null,
+        "customer_known_count": 1600,
+        "zeta_known_count": 200,
+        "unknown_count": 0,
+        "version": 1,
+        "excluded_destinations": [],
+        "member_type": "phone",
+        "reporting_enabled": true,
+        "auto_archive_enabled": false,
+        "auto_archive_at": null,
+        "restricted": false,
+        "tags": ["loan", "application", "conversion"],
+        "has_presales_audience": false,
+        "fast_segment": false,
+        "dsp_placeholder_id": null
+      },
+      {
+        "href": "https://api.boomtrain.net/201507/segments/404003",
+        "id": 404003,
+        "account_id": 2003,
+        "account_name": "FNBO EU",
+        "name": "Segment - Recent Credit Card Users",
+        "description": "Users who recently started using their new credit card",
+        "auto_update": true,
+        "conditions": {
+          "rules": "[\"and\",[\"eq\",\"user.credit_card_status\",\"active\"],[\"withinlast\",\"user.credit_card_activation_date\",\"60\",\"days\"]]",
+          "contact_profile_rules": "[\"and\",[\"eq\",\"user.contacts.type\",\"email\"],[\"withinlast\",\"user.contacts.last_opened\",\"7\",\"days\"]]",
+          "message_rules": "[\"and\",[\"does\",\"clicked\",[\"nudgetoken\",\"[0]cardpromo9876wxyz\"]],[\"withinlast\",\"event.activity_timestamp\",\"14\",\"days\"]]",
+          "segment_rules": "[\"ismember\",[\"anyof\",\"u1v2w3x4y5z6a7b8c9d0\",\"d0c9b8a7x6w5v4u3t2s1\"]]",
+          "activity_rules": "[\"and\",[\"does\",\"event.name\",\"[0]card_transaction\"],[\"withinlast\",\"event.activity_timestamp\",\"30\",\"days\"]]",
+          "experience_rules": "[\"does\",\"experience_entered\",[\"token\",[\"xyz789lmn456opq123\"]]]",
+          "metadata": {
+            "demographic": "[\"and\",[\"gte\",\"user.age\",18],[\"lte\",\"user.age\",65]]"
+          }
+        },
+        "status": "active",
+        "segment_type": "saved_query",
+        "segment_goal": "engagement",
+        "segment_token": "opq123xyz789lmn456",
+        "touch_settings": {},
+        "cdp_conditions": {
+          "metadata": {
+            "segments": {}
+          }
+        },
+        "creator_id": 71236,
+        "creator": {
+          "id": 71236,
+          "first_name": "Sophia",
+          "last_name": "Wilson",
+          "display_name": "Sophia Wilson",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "updated_by_id": 71236,
+        "updated_by": {
+          "id": 71236,
+          "first_name": "Sophia",
+          "last_name": "Wilson",
+          "display_name": "Sophia Wilson",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "created_at": "2024-09-15T12:00:00.000Z",
+        "updated_at": "2024-09-15T14:00:00.000Z",
+        "member_count": 2500,
+        "member_count_updated_at": "2024-09-15T15:00:00+00:00",
+        "segment_creator": "Sophia Wilson",
+        "resegment_status": null,
+        "segment_source": {},
+        "meta_info": {
+          "multifilters": true,
+          "fast_segment": false
+        },
+        "api_access": true,
+        "external_data_source_id": null,
+        "data_source_type": null,
+        "child_segment_ids": [],
+        "parent_segment_ids": [],
+        "segment_population_progress": null,
+        "customer_known_count": 2300,
+        "zeta_known_count": 200,
+        "unknown_count": 0,
+        "version": 1,
+        "excluded_destinations": [],
+        "member_type": "email",
+        "reporting_enabled": true,
+        "auto_archive_enabled": true,
+        "auto_archive_at": "2025-03-20T12:00:00.000Z",
+        "restricted": false,
+        "tags": ["credit_card", "recent_users", "engagement"],
+        "has_presales_audience": false,
+        "fast_segment": false,
+        "dsp_placeholder_id": null
+      },
+      {
+        "href": "https://api.boomtrain.net/201507/segments/404004",
+        "id": 404004,
+        "account_id": 2003,
+        "account_name": "FNBO EU",
+        "name": "Segment - International Travelers",
+        "description": "Users who have traveled internationally in the last year",
+        "auto_update": true,
+        "conditions": {
+          "rules": "[\"and\",[\"gte\",\"user.travel_frequency\",\"3\"],[\"eq\",\"user.international_travel\",\"true\"]]",
+          "contact_profile_rules": "[\"and\",[\"eq\",\"user.contacts.type\",\"email\"],[\"withinlast\",\"user.contacts.last_opened\",\"14\",\"days\"]]",
+          "message_rules": "[\"and\",[\"does\",\"opened\",[\"nudgetoken\",\"[0]travelpromo6543abcd\"]],[\"withinlast\",\"event.activity_timestamp\",\"30\",\"days\"]]",
+          "segment_rules": "[\"ismember\",[\"anyof\",\"a1b2c3d4e5f6g7h8i9j0\",\"j0i9h8g7f6e5d4c3b2a1\"]]",
+          "activity_rules": "[\"and\",[\"does\",\"event.name\",\"[0]travel_booking\"],[\"withinlast\",\"event.activity_timestamp\",\"60\",\"days\"]]",
+          "experience_rules": "[\"does\",\"experience_entered\",[\"token\",[\"ijk456lmn789opq123\"]]]",
+          "metadata": {
+            "demographic": "[\"and\",[\"gte\",\"user.age\",25],[\"lte\",\"user.age\",55]]"
+          }
+        },
+        "status": "active",
+        "segment_type": "saved_query",
+        "segment_goal": "retention",
+        "segment_token": "opq123ijk456lmn789",
+        "touch_settings": {},
+        "cdp_conditions": {
+          "metadata": {
+            "segments": {}
+          }
+        },
+        "creator_id": 71237,
+        "creator": {
+          "id": 71237,
+          "first_name": "Jack",
+          "last_name": "Green",
+          "display_name": "Jack Green",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "updated_by_id": 71237,
+        "updated_by": {
+          "id": 71237,
+          "first_name": "Jack",
+          "last_name": "Green",
+          "display_name": "Jack Green",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "created_at": "2024-09-16T13:00:00.000Z",
+        "updated_at": "2024-09-16T14:30:00.000Z",
+        "member_count": 900,
+        "member_count_updated_at": "2024-09-16T15:00:00+00:00",
+        "segment_creator": "Jack Green",
+        "resegment_status": null,
+        "segment_source": {},
+        "meta_info": {
+          "multifilters": true,
+          "fast_segment": true
+        },
+        "api_access": false,
+        "external_data_source_id": null,
+        "data_source_type": null,
+        "child_segment_ids": [],
+        "parent_segment_ids": [],
+        "segment_population_progress": null,
+        "customer_known_count": 800,
+        "zeta_known_count": 100,
+        "unknown_count": 0,
+        "version": 1,
+        "excluded_destinations": [],
+        "member_type": "email",
+        "reporting_enabled": true,
+        "auto_archive_enabled": true,
+        "auto_archive_at": "2025-03-25T13:00:00.000Z",
+        "restricted": false,
+        "tags": ["international_travel", "recent_travelers", "retention"],
+        "has_presales_audience": false,
+        "fast_segment": true,
+        "dsp_placeholder_id": null
+      },
+      {
+        "href": "https://api.boomtrain.net/201507/segments/404005",
+        "id": 404005,
+        "account_id": 2003,
+        "account_name": "FNBO EU",
+        "name": "Segment - Active Investment Account Holders",
+        "description": "Users with active investment accounts for targeted promotions",
+        "auto_update": true,
+        "conditions": {
+          "rules": "[\"and\",[\"eq\",\"user.investment_status\",\"active\"],[\"gte\",\"user.investment_balance\",5000]]",
+          "contact_profile_rules": "[\"and\",[\"eq\",\"user.contacts.type\",\"email\"],[\"withinlast\",\"user.contacts.last_opened\",\"30\",\"days\"]]",
+          "message_rules": "[\"and\",[\"does\",\"opened\",[\"nudgetoken\",\"[0]investpromo1234abcd\"]],[\"withinlast\",\"event.activity_timestamp\",\"45\",\"days\"]]",
+          "segment_rules": "[\"ismember\",[\"anyof\",\"z1y2x3w4v5u6t7s8r9q0\",\"q0r9s8t7u6v5w4x3y2z1\"]]",
+          "activity_rules": "[\"and\",[\"does\",\"event.name\",\"[0]investment_update\"],[\"withinlast\",\"event.activity_timestamp\",\"60\",\"days\"]]",
+          "experience_rules": "[\"does\",\"experience_entered\",[\"token\",[\"mno456pqr789stu123\"]]]",
+          "metadata": {
+            "demographic": "[\"and\",[\"gte\",\"user.age\",30],[\"lte\",\"user.age\",70]]"
+          }
+        },
+        "status": "active",
+        "segment_type": "saved_query",
+        "segment_goal": "promotion",
+        "segment_token": "stu123mno456pqr789",
+        "touch_settings": {},
+        "cdp_conditions": {
+          "metadata": {
+            "segments": {}
+          }
+        },
+        "creator_id": 71238,
+        "creator": {
+          "id": 71238,
+          "first_name": "Emily",
+          "last_name": "Johnson",
+          "display_name": "Emily Johnson",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "updated_by_id": 71238,
+        "updated_by": {
+          "id": 71238,
+          "first_name": "Emily",
+          "last_name": "Johnson",
+          "display_name": "Emily Johnson",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "created_at": "2024-09-17T14:00:00.000Z",
+        "updated_at": "2024-09-17T15:30:00.000Z",
+        "member_count": 1500,
+        "member_count_updated_at": "2024-09-17T16:00:00+00:00",
+        "segment_creator": "Emily Johnson",
+        "resegment_status": null,
+        "segment_source": {},
+        "meta_info": {
+          "multifilters": true,
+          "fast_segment": true
+        },
+        "api_access": true,
+        "external_data_source_id": null,
+        "data_source_type": null,
+        "child_segment_ids": [],
+        "parent_segment_ids": [],
+        "segment_population_progress": null,
+        "customer_known_count": 1400,
+        "zeta_known_count": 100,
+        "unknown_count": 0,
+        "version": 1,
+        "excluded_destinations": [],
+        "member_type": "email",
+        "reporting_enabled": true,
+        "auto_archive_enabled": true,
+        "auto_archive_at": "2025-04-01T14:00:00.000Z",
+        "restricted": false,
+        "tags": ["investment", "active_accounts", "promotion"],
+        "has_presales_audience": false,
+        "fast_segment": true,
+        "dsp_placeholder_id": null
+      },
+      {
+        "href": "https://api.boomtrain.net/201507/segments/405001",
+        "id": 405001,
+        "account_id": 2004,
+        "account_name": "MLB",
+        "name": "Segment - Recent Ticket Buyers",
+        "description": "Users who have purchased tickets in the last 30 days",
+        "auto_update": true,
+        "conditions": {
+          "rules": "[\"and\",[\"eq\",\"user.ticket_status\",\"purchased\"],[\"withinlast\",\"user.ticket_purchase_date\",\"30\",\"days\"]]",
+          "contact_profile_rules": "[\"and\",[\"eq\",\"user.contacts.type\",\"email\"],[\"withinlast\",\"user.contacts.last_opened\",\"7\",\"days\"]]",
+          "message_rules": "[\"and\",[\"does\",\"opened\",[\"nudgetoken\",\"[0]ticketpromo12345\"]],[\"withinlast\",\"event.activity_timestamp\",\"30\",\"days\"]]",
+          "segment_rules": "[\"ismember\",[\"anyof\",\"a1b2c3d4e5f6g7h8i9j0\",\"j0i9h8g7f6e5d4c3b2a1\"]]",
+          "activity_rules": "[\"and\",[\"does\",\"event.name\",\"[0]ticket_purchase\"],[\"withinlast\",\"event.activity_timestamp\",\"30\",\"days\"]]",
+          "experience_rules": "[\"does\",\"experience_entered\",[\"token\",[\"xyz123abcd456efg\"]]]",
+          "metadata": {
+            "demographic": "[\"and\",[\"gte\",\"user.age\",18],[\"lte\",\"user.age\",65]]"
+          }
+        },
+        "status": "active",
+        "segment_type": "saved_query",
+        "segment_goal": "engagement",
+        "segment_token": "efg123xyz456abcd",
+        "touch_settings": {},
+        "cdp_conditions": {
+          "metadata": {
+            "segments": {}
+          }
+        },
+        "creator_id": 81234,
+        "creator": {
+          "id": 81234,
+          "first_name": "Ryan",
+          "last_name": "Smith",
+          "display_name": "Ryan Smith",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "updated_by_id": 81234,
+        "updated_by": {
+          "id": 81234,
+          "first_name": "Ryan",
+          "last_name": "Smith",
+          "display_name": "Ryan Smith",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "created_at": "2024-09-20T10:00:00.000Z",
+        "updated_at": "2024-09-20T11:00:00.000Z",
+        "member_count": 5000,
+        "member_count_updated_at": "2024-09-20T12:00:00+00:00",
+        "segment_creator": "Ryan Smith",
+        "resegment_status": null,
+        "segment_source": {},
+        "meta_info": {
+          "multifilters": true,
+          "fast_segment": true
+        },
+        "api_access": true,
+        "external_data_source_id": null,
+        "data_source_type": null,
+        "child_segment_ids": [],
+        "parent_segment_ids": [],
+        "segment_population_progress": null,
+        "customer_known_count": 4800,
+        "zeta_known_count": 200,
+        "unknown_count": 0,
+        "version": 1,
+        "excluded_destinations": [],
+        "member_type": "email",
+        "reporting_enabled": true,
+        "auto_archive_enabled": true,
+        "auto_archive_at": "2025-05-01T10:00:00.000Z",
+        "restricted": false,
+        "tags": ["ticket_buyers", "recent_purchase", "engagement"],
+        "has_presales_audience": false,
+        "fast_segment": true,
+        "dsp_placeholder_id": null
+      },
+      {
+        "href": "https://api.boomtrain.net/201507/segments/405002",
+        "id": 405002,
+        "account_id": 2004,
+        "account_name": "MLB",
+        "name": "Segment - Fantasy League Players",
+        "description": "Users who participate in fantasy baseball leagues",
+        "auto_update": true,
+        "conditions": {
+          "rules": "[\"and\",[\"eq\",\"user.fantasy_league_status\",\"active\"],[\"gte\",\"user.fantasy_league_participation\",\"1\"]]",
+          "contact_profile_rules": "[\"and\",[\"eq\",\"user.contacts.type\",\"email\"],[\"withinlast\",\"user.contacts.last_opened\",\"15\",\"days\"]]",
+          "message_rules": "[\"and\",[\"does\",\"clicked\",[\"nudgetoken\",\"[0]fantasypromo9876\"]],[\"withinlast\",\"event.activity_timestamp\",\"30\",\"days\"]]",
+          "segment_rules": "[\"ismember\",[\"anyof\",\"k1l2m3n4o5p6q7r8s9t0\",\"t0r9q8p7o6n5m4l3k1\"]]",
+          "activity_rules": "[\"and\",[\"does\",\"event.name\",\"[0]fantasy_draft\"],[\"withinlast\",\"event.activity_timestamp\",\"45\",\"days\"]]",
+          "experience_rules": "[\"does\",\"experience_entered\",[\"token\",[\"abc123def456ghi\"]]]",
+          "metadata": {
+            "demographic": "[\"and\",[\"gte\",\"user.age\",21],[\"lte\",\"user.age\",55]]"
+          }
+        },
+        "status": "active",
+        "segment_type": "saved_query",
+        "segment_goal": "retention",
+        "segment_token": "ghi456abc123def",
+        "touch_settings": {},
+        "cdp_conditions": {
+          "metadata": {
+            "segments": {}
+          }
+        },
+        "creator_id": 81235,
+        "creator": {
+          "id": 81235,
+          "first_name": "Alex",
+          "last_name": "Johnson",
+          "display_name": "Alex Johnson",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "updated_by_id": 81235,
+        "updated_by": {
+          "id": 81235,
+          "first_name": "Alex",
+          "last_name": "Johnson",
+          "display_name": "Alex Johnson",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "created_at": "2024-09-21T09:00:00.000Z",
+        "updated_at": "2024-09-21T10:00:00.000Z",
+        "member_count": 3000,
+        "member_count_updated_at": "2024-09-21T11:00:00+00:00",
+        "segment_creator": "Alex Johnson",
+        "resegment_status": null,
+        "segment_source": {},
+        "meta_info": {
+          "multifilters": true,
+          "fast_segment": false
+        },
+        "api_access": true,
+        "external_data_source_id": null,
+        "data_source_type": null,
+        "child_segment_ids": [],
+        "parent_segment_ids": [],
+        "segment_population_progress": null,
+        "customer_known_count": 2900,
+        "zeta_known_count": 100,
+        "unknown_count": 0,
+        "version": 1,
+        "excluded_destinations": [],
+        "member_type": "email",
+        "reporting_enabled": true,
+        "auto_archive_enabled": true,
+        "auto_archive_at": "2025-06-01T09:00:00.000Z",
+        "restricted": false,
+        "tags": ["fantasy_baseball", "active_players", "retention"],
+        "has_presales_audience": false,
+        "fast_segment": false,
+        "dsp_placeholder_id": null
+      },
+      {
+        "href": "https://api.boomtrain.net/201507/segments/405003",
+        "id": 405003,
+        "account_id": 2004,
+        "account_name": "MLB",
+        "name": "Segment - Frequent Attendees",
+        "description": "Users who frequently attend games throughout the season",
+        "auto_update": true,
+        "conditions": {
+          "rules": "[\"and\",[\"gte\",\"user.attendance_frequency\",\"5\"],[\"withinlast\",\"user.last_game_attendance\",\"90\",\"days\"]]",
+          "contact_profile_rules": "[\"and\",[\"eq\",\"user.contacts.type\",\"email\"],[\"withinlast\",\"user.contacts.last_opened\",\"30\",\"days\"]]",
+          "message_rules": "[\"and\",[\"does\",\"opened\",[\"nudgetoken\",\"[0]attendpromo54321\"]],[\"withinlast\",\"event.activity_timestamp\",\"60\",\"days\"]]",
+          "segment_rules": "[\"ismember\",[\"anyof\",\"p1q2r3s4t5u6v7w8x9y0\",\"y0x9w8v7u6t5r4s3q2p1\"]]",
+          "activity_rules": "[\"and\",[\"does\",\"event.name\",\"[0]game_attendance\"],[\"withinlast\",\"event.activity_timestamp\",\"60\",\"days\"]]",
+          "experience_rules": "[\"does\",\"experience_entered\",[\"token\",[\"def456ghi789jkl\"]]]",
+          "metadata": {
+            "demographic": "[\"and\",[\"gte\",\"user.age\",25],[\"lte\",\"user.age\",50]]"
+          }
+        },
+        "status": "active",
+        "segment_type": "saved_query",
+        "segment_goal": "engagement",
+        "segment_token": "jkl789def456ghi",
+        "touch_settings": {},
+        "cdp_conditions": {
+          "metadata": {
+            "segments": {}
+          }
+        },
+        "creator_id": 81236,
+        "creator": {
+          "id": 81236,
+          "first_name": "Jessica",
+          "last_name": "Davis",
+          "display_name": "Jessica Davis",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "updated_by_id": 81236,
+        "updated_by": {
+          "id": 81236,
+          "first_name": "Jessica",
+          "last_name": "Davis",
+          "display_name": "Jessica Davis",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "created_at": "2024-09-22T08:00:00.000Z",
+        "updated_at": "2024-09-22T09:00:00.000Z",
+        "member_count": 2000,
+        "member_count_updated_at": "2024-09-22T10:00:00+00:00",
+        "segment_creator": "Jessica Davis",
+        "resegment_status": null,
+        "segment_source": {},
+        "meta_info": {
+          "multifilters": true,
+          "fast_segment": true
+        },
+        "api_access": true,
+        "external_data_source_id": null,
+        "data_source_type": null,
+        "child_segment_ids": [],
+        "parent_segment_ids": [],
+        "segment_population_progress": null,
+        "customer_known_count": 1900,
+        "zeta_known_count": 100,
+        "unknown_count": 0,
+        "version": 1,
+        "excluded_destinations": [],
+        "member_type": "email",
+        "reporting_enabled": true,
+        "auto_archive_enabled": true,
+        "auto_archive_at": "2025-07-01T08:00:00.000Z",
+        "restricted": false,
+        "tags": ["frequent_attendees", "game_engagement", "season_tickets"],
+        "has_presales_audience": false,
+        "fast_segment": true,
+        "dsp_placeholder_id": null
+      },
+      {
+        "href": "https://api.boomtrain.net/201507/segments/405004",
+        "id": 405004,
+        "account_id": 2004,
+        "account_name": "MLB",
+        "name": "Segment - Merchandise Shoppers",
+        "description": "Users who have purchased merchandise in the last 60 days",
+        "auto_update": true,
+        "conditions": {
+          "rules": "[\"and\",[\"eq\",\"user.merchandise_status\",\"purchased\"],[\"withinlast\",\"user.merchandise_purchase_date\",\"60\",\"days\"]]",
+          "contact_profile_rules": "[\"and\",[\"eq\",\"user.contacts.type\",\"email\"],[\"withinlast\",\"user.contacts.last_opened\",\"15\",\"days\"]]",
+          "message_rules": "[\"and\",[\"does\",\"clicked\",[\"nudgetoken\",\"[0]merchpromo67890\"]],[\"withinlast\",\"event.activity_timestamp\",\"30\",\"days\"]]",
+          "segment_rules": "[\"ismember\",[\"anyof\",\"m1n2o3p4q5r6s7t8u9v0\",\"v0u9t8s7r6q5p4o3n2m1\"]]",
+          "activity_rules": "[\"and\",[\"does\",\"event.name\",\"[0]merchandise_purchase\"],[\"withinlast\",\"event.activity_timestamp\",\"60\",\"days\"]]",
+          "experience_rules": "[\"does\",\"experience_entered\",[\"token\",[\"jkl789mno123pqr\"]]]",
+          "metadata": {
+            "demographic": "[\"and\",[\"gte\",\"user.age\",20],[\"lte\",\"user.age\",60]]"
+          }
+        },
+        "status": "active",
+        "segment_type": "saved_query",
+        "segment_goal": "retention",
+        "segment_token": "pqr123jkl789mno",
+        "touch_settings": {},
+        "cdp_conditions": {
+          "metadata": {
+            "segments": {}
+          }
+        },
+        "creator_id": 81237,
+        "creator": {
+          "id": 81237,
+          "first_name": "Jordan",
+          "last_name": "Lee",
+          "display_name": "Jordan Lee",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "updated_by_id": 81237,
+        "updated_by": {
+          "id": 81237,
+          "first_name": "Jordan",
+          "last_name": "Lee",
+          "display_name": "Jordan Lee",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "created_at": "2024-09-23T07:00:00.000Z",
+        "updated_at": "2024-09-23T08:00:00.000Z",
+        "member_count": 3500,
+        "member_count_updated_at": "2024-09-23T09:00:00+00:00",
+        "segment_creator": "Jordan Lee",
+        "resegment_status": null,
+        "segment_source": {},
+        "meta_info": {
+          "multifilters": true,
+          "fast_segment": true
+        },
+        "api_access": true,
+        "external_data_source_id": null,
+        "data_source_type": null,
+        "child_segment_ids": [],
+        "parent_segment_ids": [],
+        "segment_population_progress": null,
+        "customer_known_count": 3400,
+        "zeta_known_count": 100,
+        "unknown_count": 0,
+        "version": 1,
+        "excluded_destinations": [],
+        "member_type": "email",
+        "reporting_enabled": true,
+        "auto_archive_enabled": true,
+        "auto_archive_at": "2025-08-01T07:00:00.000Z",
+        "restricted": false,
+        "tags": ["merchandise", "recent_purchases", "retention"],
+        "has_presales_audience": false,
+        "fast_segment": true,
+        "dsp_placeholder_id": null
+      },
+      {
+        "href": "https://api.boomtrain.net/201507/segments/405005",
+        "id": 405005,
+        "account_id": 2004,
+        "account_name": "MLB",
+        "name": "Segment - New Subscribers",
+        "description": "Users who have subscribed to newsletters or updates in the last 14 days",
+        "auto_update": true,
+        "conditions": {
+          "rules": "[\"and\",[\"eq\",\"user.subscription_status\",\"subscribed\"],[\"withinlast\",\"user.subscription_date\",\"14\",\"days\"]]",
+          "contact_profile_rules": "[\"and\",[\"eq\",\"user.contacts.type\",\"email\"],[\"withinlast\",\"user.contacts.last_opened\",\"7\",\"days\"]]",
+          "message_rules": "[\"and\",[\"does\",\"opened\",[\"nudgetoken\",\"[0]newsubpromo4321\"]],[\"withinlast\",\"event.activity_timestamp\",\"14\",\"days\"]]",
+          "segment_rules": "[\"ismember\",[\"anyof\",\"n1o2p3q4r5s6t7u8v9w0\",\"w0v9u8t7s6r5p4o3n2\"]]",
+          "activity_rules": "[\"and\",[\"does\",\"event.name\",\"[0]newsletter_subscription\"],[\"withinlast\",\"event.activity_timestamp\",\"14\",\"days\"]]",
+          "experience_rules": "[\"does\",\"experience_entered\",[\"token\",[\"uvw123xyz456abc\"]]]",
+          "metadata": {
+            "demographic": "[\"and\",[\"gte\",\"user.age\",18],[\"lte\",\"user.age\",40]]"
+          }
+        },
+        "status": "active",
+        "segment_type": "saved_query",
+        "segment_goal": "acquisition",
+        "segment_token": "abc456uvw123xyz",
+        "touch_settings": {},
+        "cdp_conditions": {
+          "metadata": {
+            "segments": {}
+          }
+        },
+        "creator_id": 81238,
+        "creator": {
+          "id": 81238,
+          "first_name": "Taylor",
+          "last_name": "White",
+          "display_name": "Taylor White",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "updated_by_id": 81238,
+        "updated_by": {
+          "id": 81238,
+          "first_name": "Taylor",
+          "last_name": "White",
+          "display_name": "Taylor White",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "created_at": "2024-09-24T06:00:00.000Z",
+        "updated_at": "2024-09-24T07:00:00.000Z",
+        "member_count": 1500,
+        "member_count_updated_at": "2024-09-24T08:00:00+00:00",
+        "segment_creator": "Taylor White",
+        "resegment_status": null,
+        "segment_source": {},
+        "meta_info": {
+          "multifilters": true,
+          "fast_segment": false
+        },
+        "api_access": true,
+        "external_data_source_id": null,
+        "data_source_type": null,
+        "child_segment_ids": [],
+        "parent_segment_ids": [],
+        "segment_population_progress": null,
+        "customer_known_count": 1400,
+        "zeta_known_count": 100,
+        "unknown_count": 0,
+        "version": 1,
+        "excluded_destinations": [],
+        "member_type": "email",
+        "reporting_enabled": true,
+        "auto_archive_enabled": true,
+        "auto_archive_at": "2025-09-01T06:00:00.000Z",
+        "restricted": false,
+        "tags": ["new_subscribers", "newsletter", "acquisition"],
+        "has_presales_audience": false,
+        "fast_segment": false,
+        "dsp_placeholder_id": null
+      },
+      {
+        "href": "https://api.boomtrain.net/201507/segments/405006",
+        "id": 405006,
+        "account_id": 2004,
+        "account_name": "MLB",
+        "name": "Segment - VIP Members",
+        "description": "Users identified as VIP members based on activity and engagement",
+        "auto_update": true,
+        "conditions": {
+          "rules": "[\"and\",[\"eq\",\"user.vip_status\",\"true\"],[\"gte\",\"user.engagement_score\",\"80\"]]",
+          "contact_profile_rules": "[\"and\",[\"eq\",\"user.contacts.type\",\"phone\"],[\"withinlast\",\"user.contacts.last_interaction\",\"30\",\"days\"]]",
+          "message_rules": "[\"and\",[\"does\",\"opened\",[\"nudgetoken\",\"[0]vippromo87654\"]],[\"withinlast\",\"event.activity_timestamp\",\"90\",\"days\"]]",
+          "segment_rules": "[\"ismember\",[\"anyof\",\"x1y2z3w4v5u6t7r8s9\",\"s9r8t7u6v5w4z3y2x1\"]]",
+          "activity_rules": "[\"and\",[\"does\",\"event.name\",\"[0]vip_activity\"],[\"withinlast\",\"event.activity_timestamp\",\"90\",\"days\"]]",
+          "experience_rules": "[\"does\",\"experience_entered\",[\"token\",[\"rst789uvw456xyz\"]]]",
+          "metadata": {
+            "demographic": "[\"and\",[\"gte\",\"user.age\",30],[\"lte\",\"user.age\",60]]"
+          }
+        },
+        "status": "active",
+        "segment_type": "saved_query",
+        "segment_goal": "loyalty",
+        "segment_token": "xyz456rst789uvw",
+        "touch_settings": {},
+        "cdp_conditions": {
+          "metadata": {
+            "segments": {}
+          }
+        },
+        "creator_id": 81239,
+        "creator": {
+          "id": 81239,
+          "first_name": "Morgan",
+          "last_name": "Brown",
+          "display_name": "Morgan Brown",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "updated_by_id": 81239,
+        "updated_by": {
+          "id": 81239,
+          "first_name": "Morgan",
+          "last_name": "Brown",
+          "display_name": "Morgan Brown",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "created_at": "2024-09-25T05:00:00.000Z",
+        "updated_at": "2024-09-25T06:00:00.000Z",
+        "member_count": 1200,
+        "member_count_updated_at": "2024-09-25T07:00:00+00:00",
+        "segment_creator": "Morgan Brown",
+        "resegment_status": null,
+        "segment_source": {},
+        "meta_info": {
+          "multifilters": true,
+          "fast_segment": false
+        },
+        "api_access": true,
+        "external_data_source_id": null,
+        "data_source_type": null,
+        "child_segment_ids": [],
+        "parent_segment_ids": [],
+        "segment_population_progress": null,
+        "customer_known_count": 1100,
+        "zeta_known_count": 100,
+        "unknown_count": 0,
+        "version": 1,
+        "excluded_destinations": [],
+        "member_type": "phone",
+        "reporting_enabled": true,
+        "auto_archive_enabled": true,
+        "auto_archive_at": "2025-10-01T05:00:00.000Z",
+        "restricted": false,
+        "tags": ["vip_members", "high_engagement", "loyalty"],
+        "has_presales_audience": false,
+        "fast_segment": false,
+        "dsp_placeholder_id": null
+      },
+      {
+        "href": "https://api.boomtrain.net/201507/segments/405007",
+        "id": 405007,
+        "account_id": 2005,
+        "account_name": "MLB NY",
+        "name": "Segment - Top Scorers",
+        "description": "Users who have interacted with top scorer content in the last 30 days",
+        "auto_update": true,
+        "conditions": {
+          "rules": "[\"and\",[\"eq\",\"user.interacted_with_top_scorer\",\"true\"],[\"withinlast\",\"user.last_interaction\",\"30\",\"days\"]]",
+          "contact_profile_rules": "[\"and\",[\"eq\",\"user.contacts.type\",\"email\"],[\"withinlast\",\"user.contacts.last_opened\",\"15\",\"days\"]]",
+          "message_rules": "[\"and\",[\"does\",\"clicked\",[\"nudgetoken\",\"[0]topscorespromo98765\"]],[\"withinlast\",\"event.activity_timestamp\",\"30\",\"days\"]]",
+          "segment_rules": "[\"ismember\",[\"anyof\",\"a1b2c3d4e5f6g7h8i9j0\",\"j0i9h8g7f6e5d4c3b2a1\"]]",
+          "activity_rules": "[\"and\",[\"does\",\"event.name\",\"[0]top_scorer_interaction\"],[\"withinlast\",\"event.activity_timestamp\",\"30\",\"days\"]]",
+          "experience_rules": "[\"does\",\"experience_entered\",[\"token\",[\"xyz789abc456def\"]]]",
+          "metadata": {
+            "demographic": "[\"and\",[\"gte\",\"user.age\",18],[\"lte\",\"user.age\",50]]"
+          }
+        },
+        "status": "active",
+        "segment_type": "saved_query",
+        "segment_goal": "engagement",
+        "segment_token": "def456xyz789abc",
+        "touch_settings": {},
+        "cdp_conditions": {
+          "metadata": {
+            "segments": {}
+          }
+        },
+        "creator_id": 91234,
+        "creator": {
+          "id": 91234,
+          "first_name": "Alex",
+          "last_name": "Smith",
+          "display_name": "Alex Smith",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "updated_by_id": 91234,
+        "updated_by": {
+          "id": 91234,
+          "first_name": "Alex",
+          "last_name": "Smith",
+          "display_name": "Alex Smith",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "created_at": "2024-09-26T04:00:00.000Z",
+        "updated_at": "2024-09-26T05:00:00.000Z",
+        "member_count": 2500,
+        "member_count_updated_at": "2024-09-26T06:00:00+00:00",
+        "segment_creator": "Alex Smith",
+        "resegment_status": null,
+        "segment_source": {},
+        "meta_info": {
+          "multifilters": true,
+          "fast_segment": true
+        },
+        "api_access": true,
+        "external_data_source_id": null,
+        "data_source_type": null,
+        "child_segment_ids": [],
+        "parent_segment_ids": [],
+        "segment_population_progress": null,
+        "customer_known_count": 2400,
+        "zeta_known_count": 100,
+        "unknown_count": 0,
+        "version": 1,
+        "excluded_destinations": [],
+        "member_type": "email",
+        "reporting_enabled": true,
+        "auto_archive_enabled": true,
+        "auto_archive_at": "2025-09-01T04:00:00.000Z",
+        "restricted": false,
+        "tags": ["top_scorers", "high_engagement", "sports"],
+        "has_presales_audience": false,
+        "fast_segment": true,
+        "dsp_placeholder_id": null
+      },
+      {
+        "href": "https://api.boomtrain.net/201507/segments/405008",
+        "id": 405008,
+        "account_id": 2005,
+        "account_name": "MLB NY",
+        "name": "Segment - Game Day Offers",
+        "description": "Users who have shown interest in game day offers in the last 60 days",
+        "auto_update": true,
+        "conditions": {
+          "rules": "[\"and\",[\"eq\",\"user.interested_in_game_day_offers\",\"true\"],[\"withinlast\",\"user.last_offer_interest\",\"60\",\"days\"]]",
+          "contact_profile_rules": "[\"and\",[\"eq\",\"user.contacts.type\",\"sms\"],[\"withinlast\",\"user.contacts.last_interaction\",\"30\",\"days\"]]",
+          "message_rules": "[\"and\",[\"does\",\"opened\",[\"nudgetoken\",\"[0]gamedaypromo54321\"]],[\"withinlast\",\"event.activity_timestamp\",\"60\",\"days\"]]",
+          "segment_rules": "[\"ismember\",[\"anyof\",\"b2c3d4e5f6g7h8i9j0\",\"j0i9h8g7f6e5d4c3b2a1\"]]",
+          "activity_rules": "[\"and\",[\"does\",\"event.name\",\"[0]game_day_offer_interaction\"],[\"withinlast\",\"event.activity_timestamp\",\"60\",\"days\"]]",
+          "experience_rules": "[\"does\",\"experience_entered\",[\"token\",[\"uvw123xyz456abc\"]]]",
+          "metadata": {
+            "demographic": "[\"and\",[\"gte\",\"user.age\",21],[\"lte\",\"user.age\",45]]"
+          }
+        },
+        "status": "active",
+        "segment_type": "saved_query",
+        "segment_goal": "conversion",
+        "segment_token": "abc456uvw123xyz",
+        "touch_settings": {},
+        "cdp_conditions": {
+          "metadata": {
+            "segments": {}
+          }
+        },
+        "creator_id": 91235,
+        "creator": {
+          "id": 91235,
+          "first_name": "Jordan",
+          "last_name": "Taylor",
+          "display_name": "Jordan Taylor",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "updated_by_id": 91235,
+        "updated_by": {
+          "id": 91235,
+          "first_name": "Jordan",
+          "last_name": "Taylor",
+          "display_name": "Jordan Taylor",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "created_at": "2024-09-27T03:00:00.000Z",
+        "updated_at": "2024-09-27T04:00:00.000Z",
+        "member_count": 1800,
+        "member_count_updated_at": "2024-09-27T05:00:00+00:00",
+        "segment_creator": "Jordan Taylor",
+        "resegment_status": null,
+        "segment_source": {},
+        "meta_info": {
+          "multifilters": true,
+          "fast_segment": true
+        },
+        "api_access": true,
+        "external_data_source_id": null,
+        "data_source_type": null,
+        "child_segment_ids": [],
+        "parent_segment_ids": [],
+        "segment_population_progress": null,
+        "customer_known_count": 1700,
+        "zeta_known_count": 100,
+        "unknown_count": 0,
+        "version": 1,
+        "excluded_destinations": [],
+        "member_type": "sms",
+        "reporting_enabled": true,
+        "auto_archive_enabled": true,
+        "auto_archive_at": "2025-10-01T03:00:00.000Z",
+        "restricted": false,
+        "tags": ["game_day_offers", "interest", "conversion"],
+        "has_presales_audience": false,
+        "fast_segment": true,
+        "dsp_placeholder_id": null
+      },
+      {
+        "href": "https://api.boomtrain.net/201507/segments/405009",
+        "id": 405009,
+        "account_id": 2005,
+        "account_name": "MLB NY",
+        "name": "Segment - Loyal Fans",
+        "description": "Users who have attended more than 5 games in the past year",
+        "auto_update": true,
+        "conditions": {
+          "rules": "[\"and\",[\"gte\",\"user.game_attendance_count\",\"5\"],[\"withinlast\",\"user.last_game_attendance\",\"365\",\"days\"]]",
+          "contact_profile_rules": "[\"and\",[\"eq\",\"user.contacts.type\",\"email\"],[\"withinlast\",\"user.contacts.last_opened\",\"30\",\"days\"]]",
+          "message_rules": "[\"and\",[\"does\",\"clicked\",[\"nudgetoken\",\"[0]loyaltypromo11223\"]],[\"withinlast\",\"event.activity_timestamp\",\"30\",\"days\"]]",
+          "segment_rules": "[\"ismember\",[\"anyof\",\"c3d4e5f6g7h8i9j0\",\"j0i9h8g7f6e5d4c3b2a1\"]]",
+          "activity_rules": "[\"and\",[\"does\",\"event.name\",\"[0]loyal_fan_interaction\"],[\"withinlast\",\"event.activity_timestamp\",\"365\",\"days\"]]",
+          "experience_rules": "[\"does\",\"experience_entered\",[\"token\",[\"xyz789abc456def\"]]]",
+          "metadata": {
+            "demographic": "[\"and\",[\"gte\",\"user.age\",25],[\"lte\",\"user.age\",55]]"
+          }
+        },
+        "status": "active",
+        "segment_type": "saved_query",
+        "segment_goal": "retention",
+        "segment_token": "abc456xyz789def",
+        "touch_settings": {},
+        "cdp_conditions": {
+          "metadata": {
+            "segments": {}
+          }
+        },
+        "creator_id": 91236,
+        "creator": {
+          "id": 91236,
+          "first_name": "Jamie",
+          "last_name": "Lee",
+          "display_name": "Jamie Lee",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "updated_by_id": 91236,
+        "updated_by": {
+          "id": 91236,
+          "first_name": "Jamie",
+          "last_name": "Lee",
+          "display_name": "Jamie Lee",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "created_at": "2024-09-28T02:00:00.000Z",
+        "updated_at": "2024-09-28T03:00:00.000Z",
+        "member_count": 2000,
+        "member_count_updated_at": "2024-09-28T04:00:00+00:00",
+        "segment_creator": "Jamie Lee",
+        "resegment_status": null,
+        "segment_source": {},
+        "meta_info": {
+          "multifilters": true,
+          "fast_segment": true
+        },
+        "api_access": true,
+        "external_data_source_id": null,
+        "data_source_type": null,
+        "child_segment_ids": [],
+        "parent_segment_ids": [],
+        "segment_population_progress": null,
+        "customer_known_count": 1900,
+        "zeta_known_count": 100,
+        "unknown_count": 0,
+        "version": 1,
+        "excluded_destinations": [],
+        "member_type": "email",
+        "reporting_enabled": true,
+        "auto_archive_enabled": true,
+        "auto_archive_at": "2025-10-01T02:00:00.000Z",
+        "restricted": false,
+        "tags": ["loyal_fans", "game_attendance", "retention"],
+        "has_presales_audience": false,
+        "fast_segment": true,
+        "dsp_placeholder_id": null
+      },
+      {
+        "href": "https://api.boomtrain.net/201507/segments/405010",
+        "id": 405010,
+        "account_id": 2006,
+        "account_name": "MLB LA",
+        "name": "Segment - Frequent Game Attendees",
+        "description": "Users who have attended more than 10 games in the past 6 months",
+        "auto_update": true,
+        "conditions": {
+          "rules": "[\"and\",[\"gte\",\"user.game_attendance_count\",\"10\"],[\"withinlast\",\"user.last_game_attendance\",\"180\",\"days\"]]",
+          "contact_profile_rules": "[\"and\",[\"eq\",\"user.contacts.type\",\"email\"],[\"withinlast\",\"user.contacts.last_opened\",\"60\",\"days\"]]",
+          "message_rules": "[\"and\",[\"does\",\"opened\",[\"nudgetoken\",\"[0]gameattendee34567\"]],[\"withinlast\",\"event.activity_timestamp\",\"180\",\"days\"]]",
+          "segment_rules": "[\"ismember\",[\"anyof\",\"d1e2f3g4h5i6j7k8l9m0\",\"m0l9k8j7i6h5g4f3e2d1\"]]",
+          "activity_rules": "[\"and\",[\"does\",\"event.name\",\"[0]game_attendance\"],[\"withinlast\",\"event.activity_timestamp\",\"180\",\"days\"]]",
+          "experience_rules": "[\"does\",\"experience_entered\",[\"token\",[\"abc123def456ghi\"]]]",
+          "metadata": {
+            "demographic": "[\"and\",[\"gte\",\"user.age\",20],[\"lte\",\"user.age\",60]]"
+          }
+        },
+        "status": "active",
+        "segment_type": "saved_query",
+        "segment_goal": "retention",
+        "segment_token": "ghi456abc123def",
+        "touch_settings": {},
+        "cdp_conditions": {
+          "metadata": {
+            "segments": {}
+          }
+        },
+        "creator_id": 102345,
+        "creator": {
+          "id": 102345,
+          "first_name": "Chris",
+          "last_name": "Johnson",
+          "display_name": "Chris Johnson",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "updated_by_id": 102345,
+        "updated_by": {
+          "id": 102345,
+          "first_name": "Chris",
+          "last_name": "Johnson",
+          "display_name": "Chris Johnson",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "created_at": "2024-09-29T01:00:00.000Z",
+        "updated_at": "2024-09-29T02:00:00.000Z",
+        "member_count": 3000,
+        "member_count_updated_at": "2024-09-29T03:00:00+00:00",
+        "segment_creator": "Chris Johnson",
+        "resegment_status": null,
+        "segment_source": {},
+        "meta_info": {
+          "multifilters": true,
+          "fast_segment": true
+        },
+        "api_access": true,
+        "external_data_source_id": null,
+        "data_source_type": null,
+        "child_segment_ids": [],
+        "parent_segment_ids": [],
+        "segment_population_progress": null,
+        "customer_known_count": 2900,
+        "zeta_known_count": 100,
+        "unknown_count": 0,
+        "version": 1,
+        "excluded_destinations": [],
+        "member_type": "email",
+        "reporting_enabled": true,
+        "auto_archive_enabled": true,
+        "auto_archive_at": "2025-09-01T01:00:00.000Z",
+        "restricted": false,
+        "tags": ["frequent_attendees", "game_engagement", "retention"],
+        "has_presales_audience": false,
+        "fast_segment": true,
+        "dsp_placeholder_id": null
+      },
+      {
+        "href": "https://api.boomtrain.net/201507/segments/405011",
+        "id": 405011,
+        "account_id": 2006,
+        "account_name": "MLB LA",
+        "name": "Segment - Merchandise Shoppers",
+        "description": "Users who have purchased merchandise in the past 90 days",
+        "auto_update": true,
+        "conditions": {
+          "rules": "[\"and\",[\"eq\",\"user.purchased_merchandise\",\"true\"],[\"withinlast\",\"user.last_purchase_date\",\"90\",\"days\"]]",
+          "contact_profile_rules": "[\"and\",[\"eq\",\"user.contacts.type\",\"phone\"],[\"withinlast\",\"user.contacts.last_interaction\",\"30\",\"days\"]]",
+          "message_rules": "[\"and\",[\"does\",\"clicked\",[\"nudgetoken\",\"[0]merchpromo67890\"]],[\"withinlast\",\"event.activity_timestamp\",\"90\",\"days\"]]",
+          "segment_rules": "[\"ismember\",[\"anyof\",\"e1f2g3h4i5j6k7l8m9n0\",\"n0m9l8k7j6i5h4g3e2f1\"]]",
+          "activity_rules": "[\"and\",[\"does\",\"event.name\",\"[0]merchandise_purchase\"],[\"withinlast\",\"event.activity_timestamp\",\"90\",\"days\"]]",
+          "experience_rules": "[\"does\",\"experience_entered\",[\"token\",[\"def456ghi789abc\"]]]",
+          "metadata": {
+            "demographic": "[\"and\",[\"gte\",\"user.age\",25],[\"lte\",\"user.age\",55]]"
+          }
+        },
+        "status": "active",
+        "segment_type": "saved_query",
+        "segment_goal": "conversion",
+        "segment_token": "abc789def456ghi",
+        "touch_settings": {},
+        "cdp_conditions": {
+          "metadata": {
+            "segments": {}
+          }
+        },
+        "creator_id": 102346,
+        "creator": {
+          "id": 102346,
+          "first_name": "Jordan",
+          "last_name": "Taylor",
+          "display_name": "Jordan Taylor",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "updated_by_id": 102346,
+        "updated_by": {
+          "id": 102346,
+          "first_name": "Jordan",
+          "last_name": "Taylor",
+          "display_name": "Jordan Taylor",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "created_at": "2024-09-30T01:00:00.000Z",
+        "updated_at": "2024-09-30T02:00:00.000Z",
+        "member_count": 2200,
+        "member_count_updated_at": "2024-09-30T03:00:00+00:00",
+        "segment_creator": "Jordan Taylor",
+        "resegment_status": null,
+        "segment_source": {},
+        "meta_info": {
+          "multifilters": true,
+          "fast_segment": true
+        },
+        "api_access": true,
+        "external_data_source_id": null,
+        "data_source_type": null,
+        "child_segment_ids": [],
+        "parent_segment_ids": [],
+        "segment_population_progress": null,
+        "customer_known_count": 2100,
+        "zeta_known_count": 100,
+        "unknown_count": 0,
+        "version": 1,
+        "excluded_destinations": [],
+        "member_type": "phone",
+        "reporting_enabled": true,
+        "auto_archive_enabled": true,
+        "auto_archive_at": "2025-10-01T01:00:00.000Z",
+        "restricted": false,
+        "tags": ["merchandise", "purchase_history", "conversion"],
+        "has_presales_audience": false,
+        "fast_segment": true,
+        "dsp_placeholder_id": null
+      },
+      {
+        "href": "https://api.boomtrain.net/201507/segments/405012",
+        "id": 405012,
+        "account_id": 2006,
+        "account_name": "MLB LA",
+        "name": "Segment - Season Ticket Holders",
+        "description": "Users who hold season tickets for the current season",
+        "auto_update": true,
+        "conditions": {
+          "rules": "[\"and\",[\"eq\",\"user.season_ticket_holder\",\"true\"],[\"withinlast\",\"user.ticket_purchase_date\",\"365\",\"days\"]]",
+          "contact_profile_rules": "[\"and\",[\"eq\",\"user.contacts.type\",\"email\"],[\"withinlast\",\"user.contacts.last_opened\",\"60\",\"days\"]]",
+          "message_rules": "[\"and\",[\"does\",\"opened\",[\"nudgetoken\",\"[0]seasonticketpromo23456\"]],[\"withinlast\",\"event.activity_timestamp\",\"60\",\"days\"]]",
+          "segment_rules": "[\"ismember\",[\"anyof\",\"f1g2h3i4j5k6l7m8n9o0\",\"o0n9m8l7k6j5i4h3g2f1\"]]",
+          "activity_rules": "[\"and\",[\"does\",\"event.name\",\"[0]season_ticket_use\"],[\"withinlast\",\"event.activity_timestamp\",\"365\",\"days\"]]",
+          "experience_rules": "[\"does\",\"experience_entered\",[\"token\",[\"xyz987abc654def\"]]]",
+          "metadata": {
+            "demographic": "[\"and\",[\"gte\",\"user.age\",30],[\"lte\",\"user.age\",65]]"
+          }
+        },
+        "status": "active",
+        "segment_type": "saved_query",
+        "segment_goal": "engagement",
+        "segment_token": "jkl012mno345pqr",
+        "touch_settings": {},
+        "cdp_conditions": {
+          "metadata": {
+            "segments": {}
+          }
+        },
+        "creator_id": 102347,
+        "creator": {
+          "id": 102347,
+          "first_name": "Taylor",
+          "last_name": "Morgan",
+          "display_name": "Taylor Morgan",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "updated_by_id": 102347,
+        "updated_by": {
+          "id": 102347,
+          "first_name": "Taylor",
+          "last_name": "Morgan",
+          "display_name": "Taylor Morgan",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "created_at": "2024-10-01T01:00:00.000Z",
+        "updated_at": "2024-10-01T02:00:00.000Z",
+        "member_count": 2500,
+        "member_count_updated_at": "2024-10-01T03:00:00+00:00",
+        "segment_creator": "Taylor Morgan",
+        "resegment_status": null,
+        "segment_source": {},
+        "meta_info": {
+          "multifilters": true,
+          "fast_segment": true
+        },
+        "api_access": true,
+        "external_data_source_id": null,
+        "data_source_type": null,
+        "child_segment_ids": [],
+        "parent_segment_ids": [],
+        "segment_population_progress": null,
+        "customer_known_count": 2400,
+        "zeta_known_count": 100,
+        "unknown_count": 0,
+        "version": 1,
+        "excluded_destinations": [],
+        "member_type": "email",
+        "reporting_enabled": true,
+        "auto_archive_enabled": true,
+        "auto_archive_at": "2025-10-01T01:00:00.000Z",
+        "restricted": false,
+        "tags": ["season_tickets", "engagement", "loyalty"],
+        "has_presales_audience": false,
+        "fast_segment": true,
+        "dsp_placeholder_id": null
+      },
+      {
+        "href": "https://api.boomtrain.net/201507/segments/405013",
+        "id": 405013,
+        "account_id": 2006,
+        "account_name": "MLB LA",
+        "name": "Segment - VIP Club Members",
+        "description": "Users who are part of the VIP club and have high engagement",
+        "auto_update": true,
+        "conditions": {
+          "rules": "[\"and\",[\"eq\",\"user.vip_club_member\",\"true\"],[\"gte\",\"user.engagement_score\",\"80\"]]",
+          "contact_profile_rules": "[\"and\",[\"eq\",\"user.contacts.type\",\"email\"],[\"withinlast\",\"user.contacts.last_interaction\",\"30\",\"days\"]]",
+          "message_rules": "[\"and\",[\"does\",\"opened\",[\"nudgetoken\",\"[0]vipclubpromo67890\"]],[\"withinlast\",\"event.activity_timestamp\",\"30\",\"days\"]]",
+          "segment_rules": "[\"ismember\",[\"anyof\",\"h1i2j3k4l5m6n7o8p9q0\",\"q0p9o8n7m6l5k4j3i2h1\"]]",
+          "activity_rules": "[\"and\",[\"does\",\"event.name\",\"[0]vip_club_engagement\"],[\"withinlast\",\"event.activity_timestamp\",\"30\",\"days\"]]",
+          "experience_rules": "[\"does\",\"experience_entered\",[\"token\",[\"abc456def789ghi\"]]]",
+          "metadata": {
+            "demographic": "[\"and\",[\"gte\",\"user.age\",28],[\"lte\",\"user.age\",60]]"
+          }
+        },
+        "status": "active",
+        "segment_type": "saved_query",
+        "segment_goal": "engagement",
+        "segment_token": "pqr789stu456vwx",
+        "touch_settings": {},
+        "cdp_conditions": {
+          "metadata": {
+            "segments": {}
+          }
+        },
+        "creator_id": 102348,
+        "creator": {
+          "id": 102348,
+          "first_name": "Morgan",
+          "last_name": "Adams",
+          "display_name": "Morgan Adams",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "updated_by_id": 102348,
+        "updated_by": {
+          "id": 102348,
+          "first_name": "Morgan",
+          "last_name": "Adams",
+          "display_name": "Morgan Adams",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "created_at": "2024-10-02T01:00:00.000Z",
+        "updated_at": "2024-10-02T02:00:00.000Z",
+        "member_count": 1800,
+        "member_count_updated_at": "2024-10-02T03:00:00+00:00",
+        "segment_creator": "Morgan Adams",
+        "resegment_status": null,
+        "segment_source": {},
+        "meta_info": {
+          "multifilters": true,
+          "fast_segment": true
+        },
+        "api_access": true,
+        "external_data_source_id": null,
+        "data_source_type": null,
+        "child_segment_ids": [],
+        "parent_segment_ids": [],
+        "segment_population_progress": null,
+        "customer_known_count": 1700,
+        "zeta_known_count": 100,
+        "unknown_count": 0,
+        "version": 1,
+        "excluded_destinations": [],
+        "member_type": "email",
+        "reporting_enabled": true,
+        "auto_archive_enabled": true,
+        "auto_archive_at": "2025-10-02T01:00:00.000Z",
+        "restricted": false,
+        "tags": ["vip_club", "high_engagement", "loyalty"],
+        "has_presales_audience": false,
+        "fast_segment": true,
+        "dsp_placeholder_id": null
+      },
+      {
+        "href": "https://api.boomtrain.net/201507/segments/406000",
+        "id": 406000,
+        "account_id": 2007,
+        "account_name": "Tombras",
+        "name": "Segment - High Value Customers",
+        "description": "Customers with a total purchase value above $500 in the past year",
+        "auto_update": true,
+        "conditions": {
+          "rules": "[\"and\",[\"gte\",\"user.total_purchase_value\",\"500\"],[\"withinlast\",\"user.last_purchase_date\",\"365\",\"days\"]]",
+          "contact_profile_rules": "[\"and\",[\"eq\",\"user.contacts.type\",\"email\"],[\"withinlast\",\"user.contacts.last_interaction\",\"30\",\"days\"]]",
+          "message_rules": "[\"and\",[\"does\",\"opened\",[\"nudgetoken\",\"[0]highvaluepromo98765\"]],[\"withinlast\",\"event.activity_timestamp\",\"30\",\"days\"]]",
+          "segment_rules": "[\"ismember\",[\"anyof\",\"a1b2c3d4e5f6g7h8i9j0\",\"j0i9h8g7f6e5d4c3b2a1\"]]",
+          "activity_rules": "[\"and\",[\"does\",\"event.name\",\"[0]purchase\"],[\"withinlast\",\"event.activity_timestamp\",\"365\",\"days\"]]",
+          "experience_rules": "[\"does\",\"experience_entered\",[\"token\",[\"ijk789lmn456opq\"]]]",
+          "metadata": {
+            "demographic": "[\"and\",[\"gte\",\"user.age\",25],[\"lte\",\"user.age\",60]]"
+          }
+        },
+        "status": "active",
+        "segment_type": "saved_query",
+        "segment_goal": "retention",
+        "segment_token": "uvw123xyz456abc",
+        "touch_settings": {},
+        "cdp_conditions": {
+          "metadata": {
+            "segments": {}
+          }
+        },
+        "creator_id": 102349,
+        "creator": {
+          "id": 102349,
+          "first_name": "Sam",
+          "last_name": "Miller",
+          "display_name": "Sam Miller",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "updated_by_id": 102349,
+        "updated_by": {
+          "id": 102349,
+          "first_name": "Sam",
+          "last_name": "Miller",
+          "display_name": "Sam Miller",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "created_at": "2024-09-15T01:00:00.000Z",
+        "updated_at": "2024-09-15T02:00:00.000Z",
+        "member_count": 2200,
+        "member_count_updated_at": "2024-09-15T03:00:00+00:00",
+        "segment_creator": "Sam Miller",
+        "resegment_status": null,
+        "segment_source": {},
+        "meta_info": {
+          "multifilters": true,
+          "fast_segment": true
+        },
+        "api_access": true,
+        "external_data_source_id": null,
+        "data_source_type": null,
+        "child_segment_ids": [],
+        "parent_segment_ids": [],
+        "segment_population_progress": null,
+        "customer_known_count": 2100,
+        "zeta_known_count": 100,
+        "unknown_count": 0,
+        "version": 1,
+        "excluded_destinations": [],
+        "member_type": "email",
+        "reporting_enabled": true,
+        "auto_archive_enabled": true,
+        "auto_archive_at": "2025-09-15T01:00:00.000Z",
+        "restricted": false,
+        "tags": ["high_value", "retention", "purchase_history"],
+        "has_presales_audience": false,
+        "fast_segment": true,
+        "dsp_placeholder_id": null
+      },
+      {
+        "href": "https://api.boomtrain.net/201507/segments/406001",
+        "id": 406001,
+        "account_id": 2007,
+        "account_name": "Tombras",
+        "name": "Segment - Recent Signups",
+        "description": "Users who signed up in the last 30 days",
+        "auto_update": true,
+        "conditions": {
+          "rules": "[\"and\",[\"withinlast\",\"user.signup_date\",\"30\",\"days\"]]",
+          "contact_profile_rules": "[\"and\",[\"eq\",\"user.contacts.type\",\"email\"],[\"withinlast\",\"user.contacts.last_opened\",\"30\",\"days\"]]",
+          "message_rules": "[\"and\",[\"does\",\"opened\",[\"nudgetoken\",\"[0]newuserpromo12345\"]],[\"withinlast\",\"event.activity_timestamp\",\"30\",\"days\"]]",
+          "segment_rules": "[\"ismember\",[\"anyof\",\"b1c2d3e4f5g6h7i8j9k0\",\"k0j9i8h7g6f5e4d3c2b1\"]]",
+          "activity_rules": "[\"and\",[\"does\",\"event.name\",\"[0]signup\"],[\"withinlast\",\"event.activity_timestamp\",\"30\",\"days\"]]",
+          "experience_rules": "[\"does\",\"experience_entered\",[\"token\",[\"mno123pqr456stu\"]]]",
+          "metadata": {
+            "demographic": "[\"and\",[\"gte\",\"user.age\",18],[\"lte\",\"user.age\",45]]"
+          }
+        },
+        "status": "active",
+        "segment_type": "saved_query",
+        "segment_goal": "acquisition",
+        "segment_token": "def456ghi789jkl",
+        "touch_settings": {},
+        "cdp_conditions": {
+          "metadata": {
+            "segments": {}
+          }
+        },
+        "creator_id": 102350,
+        "creator": {
+          "id": 102350,
+          "first_name": "Alex",
+          "last_name": "Reed",
+          "display_name": "Alex Reed",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "updated_by_id": 102350,
+        "updated_by": {
+          "id": 102350,
+          "first_name": "Alex",
+          "last_name": "Reed",
+          "display_name": "Alex Reed",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "created_at": "2024-09-16T01:00:00.000Z",
+        "updated_at": "2024-09-16T02:00:00.000Z",
+        "member_count": 1500,
+        "member_count_updated_at": "2024-09-16T03:00:00+00:00",
+        "segment_creator": "Alex Reed",
+        "resegment_status": null,
+        "segment_source": {},
+        "meta_info": {
+          "multifilters": true,
+          "fast_segment": true
+        },
+        "api_access": true,
+        "external_data_source_id": null,
+        "data_source_type": null,
+        "child_segment_ids": [],
+        "parent_segment_ids": [],
+        "segment_population_progress": null,
+        "customer_known_count": 1400,
+        "zeta_known_count": 100,
+        "unknown_count": 0,
+        "version": 1,
+        "excluded_destinations": [],
+        "member_type": "email",
+        "reporting_enabled": true,
+        "auto_archive_enabled": true,
+        "auto_archive_at": "2025-09-16T01:00:00.000Z",
+        "restricted": false,
+        "tags": ["recent_signups", "acquisition", "new_users"],
+        "has_presales_audience": false,
+        "fast_segment": true,
+        "dsp_placeholder_id": null
+      },
+      {
+        "href": "https://api.boomtrain.net/201507/segments/406002",
+        "id": 406002,
+        "account_id": 2007,
+        "account_name": "Tombras",
+        "name": "Segment - High Engagement Users",
+        "description": "Users with high engagement score above 90",
+        "auto_update": true,
+        "conditions": {
+          "rules": "[\"and\",[\"gte\",\"user.engagement_score\",\"90\"]]",
+          "contact_profile_rules": "[\"and\",[\"eq\",\"user.contacts.type\",\"email\"],[\"withinlast\",\"user.contacts.last_interaction\",\"15\",\"days\"]]",
+          "message_rules": "[\"and\",[\"does\",\"opened\",[\"nudgetoken\",\"[0]highengagepromo56789\"]],[\"withinlast\",\"event.activity_timestamp\",\"15\",\"days\"]]",
+          "segment_rules": "[\"ismember\",[\"anyof\",\"c1d2e3f4g5h6i7j8k9l0\",\"l0k9j8i7h6g5f4e3d2c1\"]]",
+          "activity_rules": "[\"and\",[\"does\",\"event.name\",\"[0]engagement\"],[\"withinlast\",\"event.activity_timestamp\",\"15\",\"days\"]]",
+          "experience_rules": "[\"does\",\"experience_entered\",[\"token\",[\"pqr456stu789vwx\"]]]",
+          "metadata": {
+            "demographic": "[\"and\",[\"gte\",\"user.age\",21],[\"lte\",\"user.age\",50]]"
+          }
+        },
+        "status": "active",
+        "segment_type": "saved_query",
+        "segment_goal": "engagement",
+        "segment_token": "ghi789jkl012mno",
+        "touch_settings": {},
+        "cdp_conditions": {
+          "metadata": {
+            "segments": {}
+          }
+        },
+        "creator_id": 102351,
+        "creator": {
+          "id": 102351,
+          "first_name": "Jordan",
+          "last_name": "Lee",
+          "display_name": "Jordan Lee",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "updated_by_id": 102351,
+        "updated_by": {
+          "id": 102351,
+          "first_name": "Jordan",
+          "last_name": "Lee",
+          "display_name": "Jordan Lee",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "created_at": "2024-09-17T01:00:00.000Z",
+        "updated_at": "2024-09-17T02:00:00.000Z",
+        "member_count": 1800,
+        "member_count_updated_at": "2024-09-17T03:00:00+00:00",
+        "segment_creator": "Jordan Lee",
+        "resegment_status": null,
+        "segment_source": {},
+        "meta_info": {
+          "multifilters": true,
+          "fast_segment": true
+        },
+        "api_access": true,
+        "external_data_source_id": null,
+        "data_source_type": null,
+        "child_segment_ids": [],
+        "parent_segment_ids": [],
+        "segment_population_progress": null,
+        "customer_known_count": 1700,
+        "zeta_known_count": 100,
+        "unknown_count": 0,
+        "version": 1,
+        "excluded_destinations": [],
+        "member_type": "email",
+        "reporting_enabled": true,
+        "auto_archive_enabled": true,
+        "auto_archive_at": "2025-09-17T01:00:00.000Z",
+        "restricted": false,
+        "tags": ["high_engagement", "active_users", "engagement_score"],
+        "has_presales_audience": false,
+        "fast_segment": true,
+        "dsp_placeholder_id": null
+      },
+      {
+        "href": "https://api.boomtrain.net/201507/segments/406003",
+        "id": 406003,
+        "account_id": 2007,
+        "account_name": "Tombras",
+        "name": "Segment - Abandoned Carts",
+        "description": "Users who added items to their cart but did not complete the purchase in the last 30 days",
+        "auto_update": true,
+        "conditions": {
+          "rules": "[\"and\",[\"does\",\"event.name\",\"[0]cart_abandoned\"],[\"withinlast\",\"event.activity_timestamp\",\"30\",\"days\"]]",
+          "contact_profile_rules": "[\"and\",[\"eq\",\"user.contacts.type\",\"email\"],[\"withinlast\",\"user.contacts.last_opened\",\"30\",\"days\"]]",
+          "message_rules": "[\"and\",[\"does\",\"opened\",[\"nudgetoken\",\"[0]cartreminder34567\"]],[\"withinlast\",\"event.activity_timestamp\",\"30\",\"days\"]]",
+          "segment_rules": "[\"ismember\",[\"anyof\",\"d1e2f3g4h5i6j7k8l9m0\",\"m0l9k8j7i6h5g4f3e2d1\"]]",
+          "activity_rules": "[\"and\",[\"does\",\"event.name\",\"[0]cart_abandoned\"],[\"withinlast\",\"event.activity_timestamp\",\"30\",\"days\"]]",
+          "experience_rules": "[\"does\",\"experience_entered\",[\"token\",[\"uvw123xyz456rst\"]]]",
+          "metadata": {
+            "demographic": "[\"and\",[\"gte\",\"user.age\",20],[\"lte\",\"user.age\",55]]"
+          }
+        },
+        "status": "active",
+        "segment_type": "saved_query",
+        "segment_goal": "recovery",
+        "segment_token": "xyz456uvw789abc",
+        "touch_settings": {},
+        "cdp_conditions": {
+          "metadata": {
+            "segments": {}
+          }
+        },
+        "creator_id": 102352,
+        "creator": {
+          "id": 102352,
+          "first_name": "Pat",
+          "last_name": "Taylor",
+          "display_name": "Pat Taylor",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "updated_by_id": 102352,
+        "updated_by": {
+          "id": 102352,
+          "first_name": "Pat",
+          "last_name": "Taylor",
+          "display_name": "Pat Taylor",
+          "avatar": null,
+          "deleted_at": null
+        },
+        "created_at": "2024-09-18T01:00:00.000Z",
+        "updated_at": "2024-09-18T02:00:00.000Z",
+        "member_count": 1200,
+        "member_count_updated_at": "2024-09-18T03:00:00+00:00",
+        "segment_creator": "Pat Taylor",
+        "resegment_status": null,
+        "segment_source": {},
+        "meta_info": {
+          "multifilters": true,
+          "fast_segment": true
+        },
+        "api_access": true,
+        "external_data_source_id": null,
+        "data_source_type": null,
+        "child_segment_ids": [],
+        "parent_segment_ids": [],
+        "segment_population_progress": null,
+        "customer_known_count": 1100,
+        "zeta_known_count": 100,
+        "unknown_count": 0,
+        "version": 1,
+        "excluded_destinations": [],
+        "member_type": "email",
+        "reporting_enabled": true,
+        "auto_archive_enabled": true,
+        "auto_archive_at": "2025-09-18T01:00:00.000Z",
+        "restricted": false,
+        "tags": ["abandoned_cart", "recovery", "shopping_cart"],
+        "has_presales_audience": false,
+        "fast_segment": true,
+        "dsp_placeholder_id": null
+      }    
+      
+]
