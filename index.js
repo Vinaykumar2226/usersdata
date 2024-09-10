@@ -3,6 +3,8 @@ const path = require("path");
 const app = express();
 const fs = require("fs");
 const flattenArrayOfObjects = require('./utils/jsonManipulationMethods').flattenArrayOfObjects
+const extractUniqueKeys = require('./extractUniqueKeys');
+
 
 const port = 3001;
 app.listen(port, () => {
@@ -122,10 +124,41 @@ app.get("/unique-account-ids", (req, res) => {
 
     try {
       const usersData = JSON.parse(data);
-      const accountIds = [...new Set(usersData.map((user) => user.account_id))];
-      res.status(200).json(accountIds);
+
+      // Create a map to store unique account_id and account_name pairs
+      const uniqueAccounts = new Map();
+
+      usersData.forEach((user) => {
+        if (!uniqueAccounts.has(user.account_id)) {
+          uniqueAccounts.set(user.account_id, user.account_name);
+        }
+      });
+
+      // Convert map to array of objects
+      const result = Array.from(uniqueAccounts, ([account_id, account_name]) => ({
+        account_id,
+        account_name
+      }));
+
+      res.status(200).json(result);
     } catch (parseError) {
       res.status(500).json({ error: "Failed to parse the JSON file." });
+    }
+  });
+});
+
+app.get('/unique-keys', (req, res) => {
+  fs.readFile(path.join(__dirname, 'data.json'), 'utf8', (err, data) => {
+    if (err) {
+      return res.status(500).json({ error: 'Failed to read the JSON file.' });
+    }
+
+    try {
+      const jsonData = JSON.parse(data);
+      const uniqueKeys = extractUniqueKeys(jsonData);
+      res.status(200).json(uniqueKeys);
+    } catch (parseError) {
+      res.status(500).json({ error: 'Failed to parse the JSON file.' });
     }
   });
 });
