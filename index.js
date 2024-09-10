@@ -6,6 +6,7 @@ const flattenArrayOfObjects = require('./utils/jsonManipulationMethods').flatten
 const extractUniqueKeys = require('./extractUniquekeys');
 
 
+const nestedColIsPresent = col => col.includes('.')
 
 const port = 3001;
 app.listen(port, () => {
@@ -13,8 +14,9 @@ app.listen(port, () => {
 });
 
 // Endpoint to return the JSON file
-app.get("/users", (req, res) => {
+app.get("/all-users", (req, res) => {
   const filePath = path.join(__dirname, "data.json");
+  console.log(1)
 
   // Send the JSON file
   res.sendFile(filePath, (err) => {
@@ -25,8 +27,9 @@ app.get("/users", (req, res) => {
 });
 
 // Endpoint that takes comma-separated account_id as URL params
-app.get("/users/:account_ids", (req, res) => {
-  const accountIds = req.params.account_ids.split(",");
+app.get("/users", (req, res) => {
+  console.log(2)
+  const accountIds = req.query.ids ? req.query.ids.split(","): null;
   const cols = req.query.cols ? req.query.cols.split(",") : null;
   const filePath = path.join(__dirname, "data.json");
 
@@ -38,18 +41,47 @@ app.get("/users/:account_ids", (req, res) => {
     try {
       const usersData = JSON.parse(data);
 
-      // Filter the results based on the account IDs
-      const filteredData = usersData.filter((user) =>
-        accountIds.includes(user.account_id.toString())
-      );
+      let filteredData = usersData
+
+      // If ids parameter is given, filter the keys
+      if (accountIds){
+        filteredData = usersData.filter((user) =>
+          accountIds.includes(user.account_id.toString())
+        );
+      }
 
       // If cols parameter is given, filter the keys
       if (cols) {
         const result = filteredData.map((user) => {
           const filteredUser = {};
           cols.forEach((col) => {
-            if (user.hasOwnProperty(col)) {
-              filteredUser[col] = user[col];
+            // highest level col
+            if (!nestedColIsPresent(col)) { 
+              // remove the * if present
+              if (col.includes('*')) col = col.slice(0, -1)
+                
+              if (user.hasOwnProperty(col)) {
+                filteredUser[col] = user[col];
+              } else {
+                filteredUser[col] = 'NA';
+              }
+            } else {
+              // . case
+              const col_name = col.split('.')
+              let user_data = user
+              for (const nested_col of col_name) {
+                if (nested_col.includes('*')){
+                  // removes the last char ie '*'
+                  nested_col = nested_col.slice(0, -1)
+                }
+                if (!user_data.hasOwnProperty(nested_col)) {
+                  filteredUser[col] = 'NA'
+                  user_data = 'NA'
+                } else {
+                  user_data = user_data[nested_col];
+                }
+              }
+              filteredUser[col] = user_data
             }
           });
           return filteredUser;
