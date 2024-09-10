@@ -116,7 +116,10 @@ app.get("/users-specific", (req, res) => {
 
 
 app.get("/unique-account-ids", (req, res) => {
-  fs.readFile(path.join(__dirname, "data.json"), "utf8", (err, data) => {
+
+  const filePath = path.join(__dirname, "data.json");
+
+  fs.readFile(filePath, "utf8", (err, data) => {
     if (err) {
       return res.status(500).json({ error: "Failed to read the JSON file." });
     }
@@ -145,5 +148,4 @@ app.get("/unique-account-ids", (req, res) => {
     }
   });
 });
-
 
