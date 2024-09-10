@@ -146,18 +146,4 @@ app.get("/unique-account-ids", (req, res) => {
   });
 });
 
-app.get('/unique-keys', (req, res) => {
-  fs.readFile(path.join(__dirname, 'data.json'), 'utf8', (err, data) => {
-    if (err) {
-      return res.status(500).json({ error: 'Failed to read the JSON file.' });
-    }
 
-    try {
-      const jsonData = JSON.parse(data);
-      const uniqueKeys = extractUniqueKeys(jsonData);
-      res.status(200).json(uniqueKeys);
-    } catch (parseError) {
-      res.status(500).json({ error: 'Failed to parse the JSON file.' });
-    }
-  });
-});
