@@ -53,10 +53,6 @@
         "segment_creator": "Jane Doe",
         "resegment_status": null,
         "segment_source": {},
-        "meta_info": {
-          "multifilters": false,
-          "fast_segment": true
-        },
         "api_access": true,
         "external_data_source_id": null,
         "data_source_type": null,
