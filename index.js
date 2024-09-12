@@ -16,8 +16,7 @@ app.listen(port, () => {
 // Endpoint to return the JSON file
 app.get("/all-users", (req, res) => {
   const filePath = path.join(__dirname, "data.json");
-  console.log(1)
-
+  
   // Send the JSON file
   res.sendFile(filePath, (err) => {
     if (err) {
@@ -28,7 +27,6 @@ app.get("/all-users", (req, res) => {
 
 // Endpoint that takes comma-separated account_id as URL params
 app.get("/users", (req, res) => {
-  console.log(2)
   const accountIds = req.query.ids ? req.query.ids.split(","): null;
   const cols = req.query.cols ? req.query.cols.split(",") : null;
   const filePath = path.join(__dirname, "data.json");
@@ -69,14 +67,14 @@ app.get("/users", (req, res) => {
               // . case
               const col_name = col.split('.')
               let user_data = user
-              for (const nested_col of col_name) {
+              for (let nested_col of col_name) {
                 if (nested_col.includes('*')){
                   // removes the last char ie '*'
                   nested_col = nested_col.slice(0, -1)
                 }
                 if (!user_data.hasOwnProperty(nested_col)) {
-                  filteredUser[col] = 'NA'
                   user_data = 'NA'
+                  break
                 } else {
                   user_data = user_data[nested_col];
                 }
