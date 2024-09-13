@@ -1,4 +1,4 @@
-Fetches all the users data<br/>
+Fetches all the Segements data present<br/>
 https://usersdata-4osl.onrender.com/users<br/>
 
 fetches data based on comma separated ids (account_id) and cols specified<br/>
@@ -11,9 +11,11 @@ http://usersdata-4osl.onrender.com/users?ids=2000,2001&cols=id,account_id,name,c
 fetches all the unique account id<br/>
 https://usersdata-4osl.onrender.com/unique-account-ids<br/>
 
+fetches all the unique columns(keys) in data and if nested objects found returns the column(key) by adding suffix('*')<br/>
+https://usersdata-4osl.onrender.com/unique-keys
+
+<br/>
+Not used <br/>
 fetches data based on comma seperated ids and cols specified, cols are flattened while sending back<br/>
 ex:<br/>
 http://usersdata-4osl.onrender.com/users-specific?ids=1425,1426&cols=conditions__metadata__demographic,account_id,id<br/>
-
-fetches all the unique columns(keys) in data and if nested objects found returns the column(key) by adding suffix('*')<br/>
-https://usersdata-4osl.onrender.com/unique-keys
