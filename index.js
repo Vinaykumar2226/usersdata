@@ -2,30 +2,43 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const fs = require("fs");
-const flattenArrayOfObjects = require('./utils/jsonManipulationMethods').flattenArrayOfObjects
+// const {rpc_1} = require('./retool_rpc_configs/retool_rpc'); // Import the RetoolRPC setup
+// const {rpc_2} = require('./retool_rpc_configs/retool_rpc_updated')
+const {rpc_segment} = require('./retool_rpc_configs/retool_pls_work')
+// const flattenArrayOfObjects = require('./utils/jsonManipulationMethods').flattenArrayOfObjects
+// const { getExternalReports } = require('./zmp_prod_basic_api');
+// const {getAdminAccounts} = require('./zmp_phoenix_admin');
+// const { authenticateUser } = require('./tokenAuth');
 
 const port = 3001;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
 
-// Endpoint to return the JSON file
-app.get("/users", (req, res) => {
-  const filePath = path.join(__dirname, "data.json");
+// getExternalReports();
+// getAdminAccounts();
 
-  // Send the JSON file
-  res.sendFile(filePath, (err) => {
-    if (err) {
-      res.status(500).json({ error: "Failed to send the JSON file." });
-    }
-  });
-});
+
+
+
+// // Endpoint to return the JSON file
+// app.get("/users", (req, res) => {
+//   const filePath = path.join(__dirname, "data.json");
+
+//   // Send the JSON file
+//   res.sendFile(filePath, (err) => {
+//     if (err) {
+//       res.status(500).json({ error: "Failed to send the JSON file." });
+//     }
+//   });
+// });
 
 // Endpoint that takes comma-separated account_id as URL params
-app.get("/users/:account_ids", (req, res) => {
-  const accountIds = req.params.account_ids.split(",");
+app.get("/users", (req, res) => {
+  const accountIds = req.query.ids ? req.query.ids.split(","): null;
   const cols = req.query.cols ? req.query.cols.split(",") : null;
   const filePath = path.join(__dirname, "data.json");
+  console.log(accountIds, cols)
 
   fs.readFile(filePath, "utf8", (err, data) => {
     if (err) {
@@ -35,10 +48,14 @@ app.get("/users/:account_ids", (req, res) => {
     try {
       const usersData = JSON.parse(data);
 
-      // Filter the results based on the account IDs
-      const filteredData = usersData.filter((user) =>
-        accountIds.includes(user.account_id.toString())
-      );
+      let filteredData = usersData
+
+      // If ids parameter is given, filter the keys
+      if (accountIds){
+        filteredData = usersData.filter((user) =>
+          accountIds.includes(user.account_id.toString())
+        );
+      }
 
       // If cols parameter is given, filter the keys
       if (cols) {
@@ -47,6 +64,8 @@ app.get("/users/:account_ids", (req, res) => {
           cols.forEach((col) => {
             if (user.hasOwnProperty(col)) {
               filteredUser[col] = user[col];
+            } else {
+              filteredUser[col] = 'NA'
             }
           });
           return filteredUser;
