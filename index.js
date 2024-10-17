@@ -25,6 +25,13 @@ app.get("/all-users", (req, res) => {
   });
 });
 
+// Endpoint to have some delay in response
+app.get('/delay', (req, res) => {
+  setTimeout(() => {
+    res.send('Response after 150 seconds');
+  }, 150000); // 150 seconds = 150000 milliseconds
+});
+
 // Endpoint that takes comma-separated account_id as URL params
 app.get("/users", (req, res) => {
   const accountIds = req.query.ids ? req.query.ids.split(","): null;
