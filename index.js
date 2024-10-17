@@ -26,10 +26,19 @@ app.get("/all-users", (req, res) => {
 });
 
 // Endpoint to have some delay in response
-app.get('/delay', (req, res) => {
+app.get('/delay/:seconds', (req, res) => {
+  const delaySeconds = parseInt(req.params.seconds, 10);
+
+  // Ensure the delay is a positive number and set a maximum limit (e.g., 300 seconds)
+  if (isNaN(delaySeconds) || delaySeconds < 0 || delaySeconds > 300) {
+    return res.status(400).send('Please provide a valid delay between 0 and 300 seconds.');
+  }
+
+  const delayMilliseconds = delaySeconds * 1000;
+
   setTimeout(() => {
-    res.send('Response after 150 seconds');
-  }, 150000); // 150 seconds = 150000 milliseconds
+    res.send(`Response after ${delaySeconds} seconds`);
+  }, delayMilliseconds);
 });
 
 // Endpoint that takes comma-separated account_id as URL params
