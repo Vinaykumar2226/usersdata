@@ -37,7 +37,7 @@ app.get('/delay/:seconds', (req, res) => {
   const delayMilliseconds = delaySeconds * 1000;
 
   setTimeout(() => {
-    res.send(`Response after ${delaySeconds} seconds`);
+    res.status(200).send(`Response after ${delaySeconds} seconds`);
   }, delayMilliseconds);
 });
 
